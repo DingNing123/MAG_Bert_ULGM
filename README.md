@@ -5,7 +5,7 @@
 
 本项目参考了下面的论文和代码
 
-[Learning Modality-Specific Representations with Self-Supervised Multi-Task Learning for Multimodal Sentiment Analysis (AAAI2021)](https://arxiv.org/abs/2102.04830). Please see our another repo [MMSA](https://github.com/thuiar/MMSA) for more details, which is a scalable framework for MSA.
+[Learning Modality-Specific Representations with Self-Supervised Multi-Task Learning for Multimodal Sentiment Analysis (AAAI2021)](https://arxiv.org/abs/2102.04830). Please see their another repo [MMSA](https://github.com/thuiar/MMSA) for more details, which is a scalable framework for MSA.
 
 ### Model
 
