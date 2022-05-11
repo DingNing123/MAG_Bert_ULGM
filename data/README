@@ -1,0 +1,5 @@
+3.DataPreForMustardWithContextSpeakerIndependentBanlanced.py
+3，使用的709维视觉特征。
+
+1.DataPreForMustard.py
+1，含有resnet152的代码

@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "run.py", line 303, in <module>
+    run_normal(args)
+  File "run.py", line 185, in run_normal
+    test_results = run(args)
+  File "run.py", line 87, in run
+    best_epoch = atio.do_train(model, dataloader)
+  File "/home/dn/Desktop/Projects/MAG_Bert_ULGM/trains/multiTask/SELF_MM.py", line 156, in do_train
+    outputs = model(text, (audio, audio_lengths), (vision, vision_lengths))
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/dn/Desktop/Projects/MAG_Bert_ULGM/models/AMIO.py", line 59, in forward
+    return self.Model(text_x, audio_x, video_x)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/dn/Desktop/Projects/MAG_Bert_ULGM/models/multiTask/SELF_MM.py", line 143, in forward
+    video = self.video_model(video, video_lengths)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/dn/Desktop/Projects/MAG_Bert_ULGM/models/multiTask/SELF_MM.py", line 296, in forward
+    x1 = self.linear1(x)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/module.py", line 889, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/modules/linear.py", line 94, in forward
+    return F.linear(input, self.weight, self.bias)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/torch/nn/functional.py", line 1753, in linear
+    return torch._C._nn.linear(input, weight, bias)
+RuntimeError: mat1 dim 1 must match mat2 dim 0
+
