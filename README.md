@@ -23,4 +23,4 @@
 ours_v1 : Self_MM
 ours_v2 : mag_bert
 
-其他集中模型的源代码参考项目mmsa
+其他几种模型的源代码参考项目mmsa
