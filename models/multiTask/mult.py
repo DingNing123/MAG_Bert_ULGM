@@ -162,7 +162,7 @@ class MULT(nn.Module):
             'Feature_t': text_h,
             'Feature_a': audio_h,
             'Feature_v': video_h,
-            'Feature_f': fusion_h,
+            'Feature_f': last_hs_proj,
         }
         return res
 

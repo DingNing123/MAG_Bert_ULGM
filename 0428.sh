@@ -1,9 +1,38 @@
 #!/bin/bash
-# python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName self_mm
+# 2022年 05月 15日 星期日 12:11:19 CST
+# python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mult
+#python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mult
+python 5.特征可视化tsne.py
+
+
+# 2022年 05月 15日 星期日 11:48:37 CST 这三个是一组实验，需要按顺序运行完才可以生成可视化特征
+
 # python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mag_bert
+# python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mag_bert
+# python 5.特征可视化tsne.py
+
+# 2022年 05月 13日 星期五 13:57:18 CST
+# python 3.caseStudy.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mag_bert
+# 2022年 05月 14日 星期六 12:30:41 CST
+# python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mag_bert
+# python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName self_mm
+# 2022年 05月 13日 星期五 17:31:51 CST
+# python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mag_bert
+
+# 2022年 05月 15日 星期日 10:22:42 CST 这三个是一组实验，需要按顺序运行完才可以生成可视化特征
+# python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName self_mm
+# python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName self_mm
+# python 5.特征可视化tsne.py
+
+
+
+
+# python 4.audio_visual.py
+# 2022年 05月 14日 星期六 11:43:37 CST
+# python 5.特征可视化tsne.py
 # python run.py --datasetName mustard --ablationType indep_context --key_eval Loss --modelName self_mm
 # 2022年 05月 09日 星期一 18:13:58 CST
-python run.py --datasetName mustard --ablationType indep_context --key_eval Loss --modelName mag_bert
+# python run.py --datasetName mustard --ablationType indep_context --key_eval Loss --modelName mag_bert
 # python run.py --datasetName mustard --ablationType dependent_context --key_eval Loss --modelName mag_bert
 # python run.py --datasetName mosi --key_eval Loss --modelName mag_bert
 # python run.py --datasetName mosi --key_eval Loss --modelName svm

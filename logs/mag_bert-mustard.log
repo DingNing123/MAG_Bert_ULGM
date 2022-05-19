@@ -1,0 +1,668 @@
+2022-05-13 16:27:34 root         INFO     Start running mag_bert...
+2022-05-13 16:27:34 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 16:27:34 root         INFO     Let's use 1 GPUs!
+2022-05-13 16:27:50 MSA          INFO     train samples: (554,)
+2022-05-13 16:28:05 MSA          INFO     valid samples: (136,)
+2022-05-13 16:28:20 MSA          INFO     test samples: (136,)
+2022-05-13 16:28:32 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 16:28:38 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:28:39 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:28:39 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:32:58 root         INFO     Start running mag_bert...
+2022-05-13 16:32:58 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 16:32:58 root         INFO     Let's use 1 GPUs!
+2022-05-13 16:33:13 MSA          INFO     train samples: (554,)
+2022-05-13 16:33:29 MSA          INFO     valid samples: (136,)
+2022-05-13 16:33:38 MSA          INFO     test samples: (136,)
+2022-05-13 16:33:50 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 16:35:01 root         INFO     Start running mag_bert...
+2022-05-13 16:35:01 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 16:35:01 root         INFO     Let's use 1 GPUs!
+2022-05-13 16:35:16 MSA          INFO     train samples: (554,)
+2022-05-13 16:35:31 MSA          INFO     valid samples: (136,)
+2022-05-13 16:35:39 MSA          INFO     test samples: (136,)
+2022-05-13 16:35:51 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 16:35:57 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:35:57 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:35:57 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:43:33 root         INFO     Start running mag_bert...
+2022-05-13 16:43:33 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 16:43:33 root         INFO     Let's use 1 GPUs!
+2022-05-13 16:43:48 MSA          INFO     train samples: (554,)
+2022-05-13 16:44:03 MSA          INFO     valid samples: (136,)
+2022-05-13 16:44:07 MSA          INFO     test samples: (136,)
+2022-05-13 16:44:20 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 16:45:08 root         INFO     Start running mag_bert...
+2022-05-13 16:45:08 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 16:45:08 root         INFO     Let's use 1 GPUs!
+2022-05-13 16:45:23 MSA          INFO     train samples: (554,)
+2022-05-13 16:45:38 MSA          INFO     valid samples: (136,)
+2022-05-13 16:45:42 MSA          INFO     test samples: (136,)
+2022-05-13 16:45:54 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 16:46:01 MSA          INFO     TEST-(mag_bert) >> loss: 0.9855 
+2022-05-13 16:46:01 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:46:01 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:46:01 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 16:47:07 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/2and3/builtins.pyi
+2022-05-13 16:47:07 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+2022-05-13 17:25:55 root         INFO     Start running mag_bert...
+2022-05-13 17:25:55 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_context', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresContextIndep.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 709), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 17:25:55 root         INFO     Let's use 1 GPUs!
+2022-05-13 17:26:10 MSA          INFO     train samples: (554,)
+2022-05-13 17:26:25 MSA          INFO     valid samples: (136,)
+2022-05-13 17:26:29 MSA          INFO     test samples: (136,)
+2022-05-13 17:26:41 root         INFO     The model has 221699141 trainable parameters
+2022-05-13 17:26:48 MSA          INFO     TEST-(mag_bert) >> loss: 0.9855 
+2022-05-13 17:26:48 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:26:48 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:26:48 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:26:55 MSA          INFO     M: >>  precision: 0.4896  recall: 0.4926  f1_score: 0.4521 
+2022-05-13 17:32:17 root         INFO     Start running mag_bert...
+2022-05-13 17:32:17 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 17:32:18 root         INFO     Let's use 1 GPUs!
+2022-05-13 17:32:23 MSA          INFO     train samples: (554,)
+2022-05-13 17:32:24 MSA          INFO     valid samples: (136,)
+2022-05-13 17:32:24 MSA          INFO     test samples: (136,)
+2022-05-13 17:32:33 root         INFO     The model has 222041925 trainable parameters
+2022-05-13 17:32:33 MSA          INFO     Init labels...
+2022-05-13 17:32:33 MSA          INFO     Start training...
+2022-05-13 17:32:33 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-13 17:32:33 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:32:34 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:32:36 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:32:36 wandb.sdk.lib.retry ERROR    Retry attempt failed:
+Traceback (most recent call last):
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 595, in urlopen
+    self._prepare_proxy(conn)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 816, in _prepare_proxy
+    conn.connect()
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x7f4c59bd1e50>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f4c59bd1e50>: Failed to establish a new connection: [Errno 111] Connection refused')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/wandb/sdk/lib/retry.py", line 102, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/wandb/sdk/internal/internal_api.py", line 140, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 38, in execute
+    request = requests.post(self.url, **post_args)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/requests/adapters.py", line 502, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='api.wandb.ai', port=443): Max retries exceeded with url: /graphql (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7f4c59bd1e50>: Failed to establish a new connection: [Errno 111] Connection refused')))
+2022-05-13 17:32:38 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-13 17:32:41 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:32:55 root         INFO     Start running mag_bert...
+2022-05-13 17:32:55 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 17:32:55 root         INFO     Let's use 1 GPUs!
+2022-05-13 17:33:00 MSA          INFO     train samples: (554,)
+2022-05-13 17:33:01 MSA          INFO     valid samples: (136,)
+2022-05-13 17:33:01 MSA          INFO     test samples: (136,)
+2022-05-13 17:33:09 root         INFO     The model has 222041925 trainable parameters
+2022-05-13 17:33:09 MSA          INFO     Init labels...
+2022-05-13 17:33:09 MSA          INFO     Start training...
+2022-05-13 17:33:09 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-13 17:33:09 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:33:10 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:33:10 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:33:11 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:33:11 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-13 17:34:23 root         INFO     Start running mag_bert...
+2022-05-13 17:34:23 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 17:34:23 root         INFO     Let's use 1 GPUs!
+2022-05-13 17:34:28 MSA          INFO     train samples: (554,)
+2022-05-13 17:34:29 MSA          INFO     valid samples: (136,)
+2022-05-13 17:34:30 MSA          INFO     test samples: (136,)
+2022-05-13 17:34:37 root         INFO     The model has 224184325 trainable parameters
+2022-05-13 17:34:37 MSA          INFO     Init labels...
+2022-05-13 17:34:37 MSA          INFO     Start training...
+2022-05-13 17:34:37 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-13 17:34:37 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:34:38 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:34:38 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:34:39 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:34:39 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-13 17:34:54 MSA          INFO     TRAIN-(mag_bert) (1/1/1)>> loss: 0.8833 
+2022-05-13 17:34:54 MSA          INFO     M: >>  precision: 0.5829  recall: 0.5758  f1_score: 0.5665 
+2022-05-13 17:34:54 MSA          INFO     T: >>  precision: 0.5589  recall: 0.5469  f1_score: 0.5226 
+2022-05-13 17:34:54 MSA          INFO     VAL-(mag_bert) >> loss: 0.9842 
+2022-05-13 17:34:54 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:34:54 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:34:54 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-13 17:35:51 root         INFO     Start running mag_bert...
+2022-05-13 17:35:51 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 20, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-13 17:35:51 root         INFO     Let's use 1 GPUs!
+2022-05-13 17:35:56 MSA          INFO     train samples: (554,)
+2022-05-13 17:35:56 MSA          INFO     valid samples: (136,)
+2022-05-13 17:35:57 MSA          INFO     test samples: (136,)
+2022-05-13 17:36:04 root         INFO     The model has 224184325 trainable parameters
+2022-05-13 17:36:04 MSA          INFO     Init labels...
+2022-05-13 17:36:04 MSA          INFO     Start training...
+2022-05-13 17:36:05 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-13 17:36:05 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:36:05 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:36:05 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-13 17:36:06 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-13 17:36:06 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-13 17:36:21 MSA          INFO     TRAIN-(mag_bert) (1/1/1)>> loss: 0.8833 
+2022-05-13 17:36:21 MSA          INFO     M: >>  precision: 0.5829  recall: 0.5758  f1_score: 0.5665 
+2022-05-13 17:36:22 MSA          INFO     T: >>  precision: 0.5589  recall: 0.5469  f1_score: 0.5226 
+2022-05-13 17:36:22 MSA          INFO     VAL-(mag_bert) >> loss: 0.9842 
+2022-05-13 17:36:22 MSA          INFO     M: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-13 17:36:22 MSA          INFO     新的一轮已经验证
+2022-05-13 17:36:22 MSA          INFO     
+2022-05-13 17:36:33 MSA          INFO     TRAIN-(mag_bert) (1/2/1)>> loss: 0.7876 
+2022-05-13 17:36:33 MSA          INFO     M: >>  precision: 0.6445  recall: 0.6426  f1_score: 0.6414 
+2022-05-13 17:36:33 MSA          INFO     T: >>  precision: 0.5216  recall: 0.5199  f1_score: 0.5101 
+2022-05-13 17:36:34 MSA          INFO     VAL-(mag_bert) >> loss: 0.9709 
+2022-05-13 17:36:34 MSA          INFO     M: >>  precision: 0.6549  recall: 0.5809  f1_score: 0.5240 
+2022-05-13 17:36:34 MSA          INFO     新的一轮已经验证
+2022-05-13 17:36:34 MSA          INFO     
+2022-05-13 17:36:45 MSA          INFO     TRAIN-(mag_bert) (1/3/1)>> loss: 0.8053 
+2022-05-13 17:36:45 MSA          INFO     M: >>  precision: 0.7316  recall: 0.7184  f1_score: 0.7144 
+2022-05-13 17:36:45 MSA          INFO     T: >>  precision: 0.5280  recall: 0.5271  f1_score: 0.5274 
+2022-05-13 17:36:45 MSA          INFO     VAL-(mag_bert) >> loss: 0.8076 
+2022-05-13 17:36:45 MSA          INFO     M: >>  precision: 0.6799  recall: 0.6176  f1_score: 0.5814 
+2022-05-13 17:36:45 MSA          INFO     新的一轮已经验证
+2022-05-13 17:36:45 MSA          INFO     
+2022-05-13 17:36:56 MSA          INFO     TRAIN-(mag_bert) (1/4/1)>> loss: 0.8187 
+2022-05-13 17:36:56 MSA          INFO     M: >>  precision: 0.7154  recall: 0.7130  f1_score: 0.7122 
+2022-05-13 17:36:56 MSA          INFO     T: >>  precision: 0.5249  recall: 0.5199  f1_score: 0.5216 
+2022-05-13 17:36:57 MSA          INFO     VAL-(mag_bert) >> loss: 0.9874 
+2022-05-13 17:36:57 MSA          INFO     M: >>  precision: 0.4148  recall: 0.4926  f1_score: 0.3424 
+2022-05-13 17:36:57 MSA          INFO     新的一轮已经验证
+2022-05-13 17:36:57 MSA          INFO     
+2022-05-13 17:37:03 MSA          INFO     TRAIN-(mag_bert) (2/5/1)>> loss: 0.9379 
+2022-05-13 17:37:03 MSA          INFO     M: >>  precision: 0.6636  recall: 0.6588  f1_score: 0.6564 
+2022-05-13 17:37:03 MSA          INFO     T: >>  precision: 0.4501  recall: 0.4621  f1_score: 0.4341 
+2022-05-13 17:37:04 MSA          INFO     VAL-(mag_bert) >> loss: 0.8318 
+2022-05-13 17:37:04 MSA          INFO     M: >>  precision: 0.6849  recall: 0.5809  f1_score: 0.5123 
+2022-05-13 17:37:04 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:04 MSA          INFO     
+2022-05-13 17:37:11 MSA          INFO     TRAIN-(mag_bert) (3/6/1)>> loss: 0.8067 
+2022-05-13 17:37:11 MSA          INFO     M: >>  precision: 0.7136  recall: 0.7094  f1_score: 0.7079 
+2022-05-13 17:37:11 MSA          INFO     T: >>  precision: 0.2518  recall: 0.5018  f1_score: 0.3353 
+2022-05-13 17:37:11 MSA          INFO     VAL-(mag_bert) >> loss: 0.7645 
+2022-05-13 17:37:11 MSA          INFO     M: >>  precision: 0.6863  recall: 0.6250  f1_score: 0.5914 
+2022-05-13 17:37:11 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:11 MSA          INFO     
+2022-05-13 17:37:22 MSA          INFO     TRAIN-(mag_bert) (1/7/1)>> loss: 0.8447 
+2022-05-13 17:37:22 MSA          INFO     M: >>  precision: 0.7081  recall: 0.7076  f1_score: 0.7074 
+2022-05-13 17:37:22 MSA          INFO     T: >>  precision: 0.4560  recall: 0.4729  f1_score: 0.4038 
+2022-05-13 17:37:22 MSA          INFO     VAL-(mag_bert) >> loss: 0.7360 
+2022-05-13 17:37:23 MSA          INFO     M: >>  precision: 0.7125  recall: 0.6765  f1_score: 0.6621 
+2022-05-13 17:37:23 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:23 MSA          INFO     
+2022-05-13 17:37:34 MSA          INFO     TRAIN-(mag_bert) (1/8/1)>> loss: 0.8025 
+2022-05-13 17:37:34 MSA          INFO     M: >>  precision: 0.7125  recall: 0.7112  f1_score: 0.7107 
+2022-05-13 17:37:34 MSA          INFO     T: >>  precision: 0.4747  recall: 0.4946  f1_score: 0.4449 
+2022-05-13 17:37:34 MSA          INFO     VAL-(mag_bert) >> loss: 0.8286 
+2022-05-13 17:37:34 MSA          INFO     M: >>  precision: 0.7112  recall: 0.6103  f1_score: 0.5574 
+2022-05-13 17:37:34 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:34 MSA          INFO     
+2022-05-13 17:37:41 MSA          INFO     TRAIN-(mag_bert) (2/9/1)>> loss: 0.8082 
+2022-05-13 17:37:41 MSA          INFO     M: >>  precision: 0.7136  recall: 0.7130  f1_score: 0.7128 
+2022-05-13 17:37:41 MSA          INFO     T: >>  precision: 0.5030  recall: 0.5018  f1_score: 0.5019 
+2022-05-13 17:37:41 MSA          INFO     VAL-(mag_bert) >> loss: 0.7086 
+2022-05-13 17:37:41 MSA          INFO     M: >>  precision: 0.7157  recall: 0.6618  f1_score: 0.6392 
+2022-05-13 17:37:41 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:41 MSA          INFO     
+2022-05-13 17:37:53 MSA          INFO     TRAIN-(mag_bert) (1/10/1)>> loss: 0.7556 
+2022-05-13 17:37:53 MSA          INFO     M: >>  precision: 0.7346  recall: 0.7329  f1_score: 0.7323 
+2022-05-13 17:37:53 MSA          INFO     T: >>  precision: 0.2518  recall: 0.5018  f1_score: 0.3353 
+2022-05-13 17:37:53 MSA          INFO     VAL-(mag_bert) >> loss: 0.8439 
+2022-05-13 17:37:53 MSA          INFO     M: >>  precision: 0.7024  recall: 0.6176  f1_score: 0.5729 
+2022-05-13 17:37:53 MSA          INFO     新的一轮已经验证
+2022-05-13 17:37:53 MSA          INFO     
+2022-05-13 17:38:00 MSA          INFO     TRAIN-(mag_bert) (2/11/1)>> loss: 0.7875 
+2022-05-13 17:38:00 MSA          INFO     M: >>  precision: 0.7115  recall: 0.7112  f1_score: 0.7111 
+2022-05-13 17:38:00 MSA          INFO     T: >>  precision: 0.4496  recall: 0.4639  f1_score: 0.4172 
+2022-05-13 17:38:00 MSA          INFO     VAL-(mag_bert) >> loss: 0.9431 
+2022-05-13 17:38:00 MSA          INFO     M: >>  precision: 0.6744  recall: 0.5294  f1_score: 0.4060 
+2022-05-13 17:38:00 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:00 MSA          INFO     
+2022-05-13 17:38:07 MSA          INFO     TRAIN-(mag_bert) (3/12/1)>> loss: 0.8460 
+2022-05-13 17:38:07 MSA          INFO     M: >>  precision: 0.6824  recall: 0.6823  f1_score: 0.6823 
+2022-05-13 17:38:07 MSA          INFO     T: >>  precision: 0.4419  recall: 0.4440  f1_score: 0.4345 
+2022-05-13 17:38:07 MSA          INFO     VAL-(mag_bert) >> loss: 0.9850 
+2022-05-13 17:38:08 MSA          INFO     M: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-13 17:38:08 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:08 MSA          INFO     
+2022-05-13 17:38:14 MSA          INFO     TRAIN-(mag_bert) (4/13/1)>> loss: 0.7979 
+2022-05-13 17:38:14 MSA          INFO     M: >>  precision: 0.7092  recall: 0.7076  f1_score: 0.7070 
+2022-05-13 17:38:14 MSA          INFO     T: >>  precision: 0.5145  recall: 0.5054  f1_score: 0.4682 
+2022-05-13 17:38:15 MSA          INFO     VAL-(mag_bert) >> loss: 0.7979 
+2022-05-13 17:38:15 MSA          INFO     M: >>  precision: 0.6799  recall: 0.6176  f1_score: 0.5814 
+2022-05-13 17:38:15 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:15 MSA          INFO     
+2022-05-13 17:38:21 MSA          INFO     TRAIN-(mag_bert) (5/14/1)>> loss: 0.7679 
+2022-05-13 17:38:21 MSA          INFO     M: >>  precision: 0.7308  recall: 0.7220  f1_score: 0.7194 
+2022-05-13 17:38:21 MSA          INFO     T: >>  precision: 0.4642  recall: 0.4838  f1_score: 0.3416 
+2022-05-13 17:38:22 MSA          INFO     VAL-(mag_bert) >> loss: 0.9584 
+2022-05-13 17:38:22 MSA          INFO     M: >>  precision: 0.7576  recall: 0.5294  f1_score: 0.3956 
+2022-05-13 17:38:22 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:22 MSA          INFO     
+2022-05-13 17:38:28 MSA          INFO     TRAIN-(mag_bert) (6/15/1)>> loss: 0.7663 
+2022-05-13 17:38:28 MSA          INFO     M: >>  precision: 0.7294  recall: 0.7292  f1_score: 0.7292 
+2022-05-13 17:38:28 MSA          INFO     T: >>  precision: 0.5252  recall: 0.5036  f1_score: 0.4123 
+2022-05-13 17:38:29 MSA          INFO     VAL-(mag_bert) >> loss: 0.6880 
+2022-05-13 17:38:29 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-13 17:38:29 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:29 MSA          INFO     
+2022-05-13 17:38:40 MSA          INFO     TRAIN-(mag_bert) (1/16/1)>> loss: 0.7594 
+2022-05-13 17:38:40 MSA          INFO     M: >>  precision: 0.7113  recall: 0.7112  f1_score: 0.7112 
+2022-05-13 17:38:40 MSA          INFO     T: >>  precision: 0.5166  recall: 0.4964  f1_score: 0.3959 
+2022-05-13 17:38:40 MSA          INFO     VAL-(mag_bert) >> loss: 0.7206 
+2022-05-13 17:38:40 MSA          INFO     M: >>  precision: 0.6833  recall: 0.6544  f1_score: 0.6402 
+2022-05-13 17:38:40 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:40 MSA          INFO     
+2022-05-13 17:38:47 MSA          INFO     TRAIN-(mag_bert) (2/17/1)>> loss: 0.7487 
+2022-05-13 17:38:47 MSA          INFO     M: >>  precision: 0.7202  recall: 0.7202  f1_score: 0.7202 
+2022-05-13 17:38:47 MSA          INFO     T: >>  precision: 0.2646  recall: 0.5144  f1_score: 0.3495 
+2022-05-13 17:38:48 MSA          INFO     VAL-(mag_bert) >> loss: 0.7381 
+2022-05-13 17:38:48 MSA          INFO     M: >>  precision: 0.6764  recall: 0.6397  f1_score: 0.6200 
+2022-05-13 17:38:48 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:48 MSA          INFO     
+2022-05-13 17:38:54 MSA          INFO     TRAIN-(mag_bert) (3/18/1)>> loss: 0.7677 
+2022-05-13 17:38:54 MSA          INFO     M: >>  precision: 0.7121  recall: 0.7112  f1_score: 0.7109 
+2022-05-13 17:38:54 MSA          INFO     T: >>  precision: 0.2816  recall: 0.5307  f1_score: 0.3680 
+2022-05-13 17:38:55 MSA          INFO     VAL-(mag_bert) >> loss: 0.9834 
+2022-05-13 17:38:55 MSA          INFO     M: >>  precision: 0.7519  recall: 0.5074  f1_score: 0.3495 
+2022-05-13 17:38:55 MSA          INFO     新的一轮已经验证
+2022-05-13 17:38:55 MSA          INFO     
+2022-05-13 17:39:01 MSA          INFO     TRAIN-(mag_bert) (4/19/1)>> loss: 0.7142 
+2022-05-13 17:39:01 MSA          INFO     M: >>  precision: 0.7429  recall: 0.7401  f1_score: 0.7393 
+2022-05-13 17:39:01 MSA          INFO     T: >>  precision: 0.2740  recall: 0.5235  f1_score: 0.3597 
+2022-05-13 17:39:02 MSA          INFO     VAL-(mag_bert) >> loss: 0.9459 
+2022-05-13 17:39:02 MSA          INFO     M: >>  precision: 0.7556  recall: 0.5221  f1_score: 0.3806 
+2022-05-13 17:39:02 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:02 MSA          INFO     
+2022-05-13 17:39:09 MSA          INFO     TRAIN-(mag_bert) (5/20/1)>> loss: 0.7123 
+2022-05-13 17:39:09 MSA          INFO     M: >>  precision: 0.7348  recall: 0.7347  f1_score: 0.7346 
+2022-05-13 17:39:09 MSA          INFO     T: >>  precision: 0.2591  recall: 0.5090  f1_score: 0.3434 
+2022-05-13 17:39:09 MSA          INFO     VAL-(mag_bert) >> loss: 0.8764 
+2022-05-13 17:39:09 MSA          INFO     M: >>  precision: 0.6991  recall: 0.5735  f1_score: 0.4937 
+2022-05-13 17:39:09 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:09 MSA          INFO     
+2022-05-13 17:39:16 MSA          INFO     TRAIN-(mag_bert) (6/21/1)>> loss: 0.7503 
+2022-05-13 17:39:16 MSA          INFO     M: >>  precision: 0.7343  recall: 0.7148  f1_score: 0.7087 
+2022-05-13 17:39:16 MSA          INFO     T: >>  precision: 0.2665  recall: 0.5162  f1_score: 0.3515 
+2022-05-13 17:39:16 MSA          INFO     VAL-(mag_bert) >> loss: 0.9926 
+2022-05-13 17:39:16 MSA          INFO     M: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-13 17:39:16 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:16 MSA          INFO     
+2022-05-13 17:39:23 MSA          INFO     TRAIN-(mag_bert) (7/22/1)>> loss: 0.7666 
+2022-05-13 17:39:23 MSA          INFO     M: >>  precision: 0.7186  recall: 0.7058  f1_score: 0.7014 
+2022-05-13 17:39:23 MSA          INFO     T: >>  precision: 0.2759  recall: 0.5253  f1_score: 0.3618 
+2022-05-13 17:39:23 MSA          INFO     VAL-(mag_bert) >> loss: 0.9866 
+2022-05-13 17:39:23 MSA          INFO     M: >>  precision: 0.6883  recall: 0.5368  f1_score: 0.4201 
+2022-05-13 17:39:23 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:23 MSA          INFO     
+2022-05-13 17:39:30 MSA          INFO     TRAIN-(mag_bert) (8/23/1)>> loss: 0.7777 
+2022-05-13 17:39:30 MSA          INFO     M: >>  precision: 0.7304  recall: 0.7112  f1_score: 0.7050 
+2022-05-13 17:39:30 MSA          INFO     T: >>  precision: 0.2684  recall: 0.5181  f1_score: 0.3536 
+2022-05-13 17:39:30 MSA          INFO     VAL-(mag_bert) >> loss: 0.9539 
+2022-05-13 17:39:30 MSA          INFO     M: >>  precision: 0.6487  recall: 0.5368  f1_score: 0.4294 
+2022-05-13 17:39:30 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:30 MSA          INFO     
+2022-05-13 17:39:37 MSA          INFO     TRAIN-(mag_bert) (9/24/1)>> loss: 0.6919 
+2022-05-13 17:39:37 MSA          INFO     M: >>  precision: 0.7486  recall: 0.7455  f1_score: 0.7447 
+2022-05-13 17:39:37 MSA          INFO     T: >>  precision: 0.2411  recall: 0.4910  f1_score: 0.3234 
+2022-05-13 17:39:38 MSA          INFO     VAL-(mag_bert) >> loss: 0.9382 
+2022-05-13 17:39:38 MSA          INFO     M: >>  precision: 0.6883  recall: 0.5368  f1_score: 0.4201 
+2022-05-13 17:39:38 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:38 MSA          INFO     
+2022-05-13 17:39:44 MSA          INFO     TRAIN-(mag_bert) (10/25/1)>> loss: 0.6977 
+2022-05-13 17:39:44 MSA          INFO     M: >>  precision: 0.7420  recall: 0.7365  f1_score: 0.7349 
+2022-05-13 17:39:44 MSA          INFO     T: >>  precision: 0.2609  recall: 0.5108  f1_score: 0.3454 
+2022-05-13 17:39:45 MSA          INFO     VAL-(mag_bert) >> loss: 0.9336 
+2022-05-13 17:39:45 MSA          INFO     M: >>  precision: 0.6328  recall: 0.5294  f1_score: 0.4157 
+2022-05-13 17:39:45 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:45 MSA          INFO     
+2022-05-13 17:39:51 MSA          INFO     TRAIN-(mag_bert) (11/26/1)>> loss: 0.7059 
+2022-05-13 17:39:51 MSA          INFO     M: >>  precision: 0.7347  recall: 0.7347  f1_score: 0.7346 
+2022-05-13 17:39:51 MSA          INFO     T: >>  precision: 0.4941  recall: 0.4964  f1_score: 0.4945 
+2022-05-13 17:39:52 MSA          INFO     VAL-(mag_bert) >> loss: 0.7948 
+2022-05-13 17:39:52 MSA          INFO     M: >>  precision: 0.6799  recall: 0.6176  f1_score: 0.5814 
+2022-05-13 17:39:52 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:52 MSA          INFO     
+2022-05-13 17:39:59 MSA          INFO     TRAIN-(mag_bert) (12/27/1)>> loss: 0.7290 
+2022-05-13 17:39:59 MSA          INFO     M: >>  precision: 0.7238  recall: 0.7238  f1_score: 0.7238 
+2022-05-13 17:39:59 MSA          INFO     T: >>  precision: 0.2591  recall: 0.5090  f1_score: 0.3434 
+2022-05-13 17:39:59 MSA          INFO     VAL-(mag_bert) >> loss: 0.7964 
+2022-05-13 17:39:59 MSA          INFO     M: >>  precision: 0.6733  recall: 0.6103  f1_score: 0.5713 
+2022-05-13 17:39:59 MSA          INFO     新的一轮已经验证
+2022-05-13 17:39:59 MSA          INFO     
+2022-05-13 17:40:06 MSA          INFO     TRAIN-(mag_bert) (13/28/1)>> loss: 0.7876 
+2022-05-13 17:40:06 MSA          INFO     M: >>  precision: 0.6992  recall: 0.6913  f1_score: 0.6883 
+2022-05-13 17:40:06 MSA          INFO     T: >>  precision: 0.2482  recall: 0.4982  f1_score: 0.3313 
+2022-05-13 17:40:06 MSA          INFO     VAL-(mag_bert) >> loss: 0.8576 
+2022-05-13 17:40:06 MSA          INFO     M: >>  precision: 0.6921  recall: 0.5882  f1_score: 0.5239 
+2022-05-13 17:40:06 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:06 MSA          INFO     
+2022-05-13 17:40:13 MSA          INFO     TRAIN-(mag_bert) (14/29/1)>> loss: 0.6936 
+2022-05-13 17:40:13 MSA          INFO     M: >>  precision: 0.7444  recall: 0.7365  f1_score: 0.7343 
+2022-05-13 17:40:13 MSA          INFO     T: >>  precision: 0.4591  recall: 0.4765  f1_score: 0.4319 
+2022-05-13 17:40:13 MSA          INFO     VAL-(mag_bert) >> loss: 0.9297 
+2022-05-13 17:40:13 MSA          INFO     M: >>  precision: 0.6488  recall: 0.5515  f1_score: 0.4638 
+2022-05-13 17:40:13 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:13 MSA          INFO     
+2022-05-13 17:40:20 MSA          INFO     TRAIN-(mag_bert) (15/30/1)>> loss: 0.6883 
+2022-05-13 17:40:20 MSA          INFO     M: >>  precision: 0.7442  recall: 0.7401  f1_score: 0.7390 
+2022-05-13 17:40:20 MSA          INFO     T: >>  precision: 0.2554  recall: 0.5054  f1_score: 0.3394 
+2022-05-13 17:40:20 MSA          INFO     VAL-(mag_bert) >> loss: 0.8841 
+2022-05-13 17:40:20 MSA          INFO     M: >>  precision: 0.6686  recall: 0.5662  f1_score: 0.4885 
+2022-05-13 17:40:20 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:20 MSA          INFO     
+2022-05-13 17:40:27 MSA          INFO     TRAIN-(mag_bert) (16/31/1)>> loss: 0.7175 
+2022-05-13 17:40:27 MSA          INFO     M: >>  precision: 0.7300  recall: 0.7202  f1_score: 0.7172 
+2022-05-13 17:40:27 MSA          INFO     T: >>  precision: 0.4820  recall: 0.4910  f1_score: 0.4636 
+2022-05-13 17:40:27 MSA          INFO     VAL-(mag_bert) >> loss: 0.9880 
+2022-05-13 17:40:27 MSA          INFO     M: >>  precision: 0.7519  recall: 0.5074  f1_score: 0.3495 
+2022-05-13 17:40:27 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:27 MSA          INFO     
+2022-05-13 17:40:34 MSA          INFO     TRAIN-(mag_bert) (17/32/1)>> loss: 0.7223 
+2022-05-13 17:40:34 MSA          INFO     M: >>  precision: 0.7398  recall: 0.7274  f1_score: 0.7239 
+2022-05-13 17:40:34 MSA          INFO     T: >>  precision: 0.4735  recall: 0.4856  f1_score: 0.4194 
+2022-05-13 17:40:35 MSA          INFO     VAL-(mag_bert) >> loss: 0.9097 
+2022-05-13 17:40:35 MSA          INFO     M: >>  precision: 0.6488  recall: 0.5515  f1_score: 0.4638 
+2022-05-13 17:40:35 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:35 MSA          INFO     
+2022-05-13 17:40:41 MSA          INFO     TRAIN-(mag_bert) (18/33/1)>> loss: 0.6806 
+2022-05-13 17:40:41 MSA          INFO     M: >>  precision: 0.7537  recall: 0.7527  f1_score: 0.7525 
+2022-05-13 17:40:41 MSA          INFO     T: >>  precision: 0.5327  recall: 0.5253  f1_score: 0.3972 
+2022-05-13 17:40:42 MSA          INFO     VAL-(mag_bert) >> loss: 0.9252 
+2022-05-13 17:40:42 MSA          INFO     M: >>  precision: 0.6236  recall: 0.5368  f1_score: 0.4381 
+2022-05-13 17:40:42 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:42 MSA          INFO     
+2022-05-13 17:40:48 MSA          INFO     TRAIN-(mag_bert) (19/34/1)>> loss: 0.6746 
+2022-05-13 17:40:48 MSA          INFO     M: >>  precision: 0.7486  recall: 0.7473  f1_score: 0.7470 
+2022-05-13 17:40:48 MSA          INFO     T: >>  precision: 0.2464  recall: 0.4964  f1_score: 0.3293 
+2022-05-13 17:40:49 MSA          INFO     VAL-(mag_bert) >> loss: 0.9649 
+2022-05-13 17:40:49 MSA          INFO     M: >>  precision: 0.6487  recall: 0.5368  f1_score: 0.4294 
+2022-05-13 17:40:49 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:49 MSA          INFO     
+2022-05-13 17:40:56 MSA          INFO     TRAIN-(mag_bert) (20/35/1)>> loss: 0.6892 
+2022-05-13 17:40:56 MSA          INFO     M: >>  precision: 0.7515  recall: 0.7473  f1_score: 0.7462 
+2022-05-13 17:40:56 MSA          INFO     T: >>  precision: 0.4559  recall: 0.4765  f1_score: 0.4253 
+2022-05-13 17:40:56 MSA          INFO     VAL-(mag_bert) >> loss: 0.9755 
+2022-05-13 17:40:56 MSA          INFO     M: >>  precision: 0.6130  recall: 0.5221  f1_score: 0.4017 
+2022-05-13 17:40:56 MSA          INFO     新的一轮已经验证
+2022-05-13 17:40:56 MSA          INFO     
+2022-05-13 17:40:59 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-13 17:40:59 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-13 17:41:00 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-14 12:36:46 root         INFO     Start running mag_bert...
+2022-05-14 12:36:46 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 12:36:46 root         INFO     Let's use 1 GPUs!
+2022-05-14 12:36:52 MSA          INFO     train samples: (554,)
+2022-05-14 12:36:52 MSA          INFO     valid samples: (136,)
+2022-05-14 12:36:53 MSA          INFO     test samples: (136,)
+2022-05-14 12:37:05 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 12:37:12 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:37:12 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:37:12 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:37:28 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/2and3/builtins.pyi
+2022-05-14 12:37:28 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+2022-05-14 12:43:58 root         INFO     Start running mag_bert...
+2022-05-14 12:43:58 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 12:43:58 root         INFO     Let's use 1 GPUs!
+2022-05-14 12:44:04 MSA          INFO     train samples: (554,)
+2022-05-14 12:44:04 MSA          INFO     valid samples: (136,)
+2022-05-14 12:44:05 MSA          INFO     test samples: (136,)
+2022-05-14 12:44:15 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 12:44:22 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 12:44:22 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:44:22 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:44:22 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-14 12:44:33 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/2and3/builtins.pyi
+2022-05-14 12:44:33 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+2022-05-14 14:14:55 root         INFO     Start running mag_bert...
+2022-05-14 14:14:55 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:14:55 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:15:00 MSA          INFO     train samples: (554,)
+2022-05-14 14:15:01 MSA          INFO     valid samples: (136,)
+2022-05-14 14:15:01 MSA          INFO     test samples: (136,)
+2022-05-14 14:15:11 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:15:18 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:15:18 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:16:00 root         INFO     Start running mag_bert...
+2022-05-14 14:16:00 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:16:00 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:16:05 MSA          INFO     train samples: (554,)
+2022-05-14 14:16:06 MSA          INFO     valid samples: (136,)
+2022-05-14 14:16:06 MSA          INFO     test samples: (136,)
+2022-05-14 14:16:17 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:16:23 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:16:24 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:24:03 root         INFO     Start running mag_bert...
+2022-05-14 14:24:03 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:24:03 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:24:09 MSA          INFO     train samples: (554,)
+2022-05-14 14:24:09 MSA          INFO     valid samples: (136,)
+2022-05-14 14:24:10 MSA          INFO     test samples: (136,)
+2022-05-14 14:24:20 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:24:27 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:24:27 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:24:27 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-14 14:25:42 root         INFO     Start running mag_bert...
+2022-05-14 14:25:42 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:25:42 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:25:48 MSA          INFO     train samples: (554,)
+2022-05-14 14:25:48 MSA          INFO     valid samples: (136,)
+2022-05-14 14:25:49 MSA          INFO     test samples: (136,)
+2022-05-14 14:26:00 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:26:06 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:26:06 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:26:07 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-14 14:43:46 root         INFO     Start running mag_bert...
+2022-05-14 14:43:46 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:43:46 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:43:52 MSA          INFO     train samples: (554,)
+2022-05-14 14:43:52 MSA          INFO     valid samples: (136,)
+2022-05-14 14:43:53 MSA          INFO     test samples: (136,)
+2022-05-14 14:44:03 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:44:10 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:44:10 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:44:10 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-14 14:48:43 root         INFO     Start running mag_bert...
+2022-05-14 14:48:43 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:48:43 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:48:48 MSA          INFO     train samples: (554,)
+2022-05-14 14:48:49 MSA          INFO     valid samples: (136,)
+2022-05-14 14:48:50 MSA          INFO     test samples: (136,)
+2022-05-14 14:49:00 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:49:07 MSA          INFO     TEST-(mag_bert) >> loss: 0.6823 
+2022-05-14 14:49:08 MSA          INFO     M: >>  precision: 0.6858  recall: 0.6606  f1_score: 0.6487 
+2022-05-14 14:49:08 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-14 14:52:04 root         INFO     Start running mag_bert...
+2022-05-14 14:52:04 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-14 14:52:04 root         INFO     Let's use 1 GPUs!
+2022-05-14 14:52:09 MSA          INFO     train samples: (554,)
+2022-05-14 14:52:10 MSA          INFO     valid samples: (136,)
+2022-05-14 14:52:11 MSA          INFO     test samples: (136,)
+2022-05-14 14:52:21 root         INFO     The model has 224184325 trainable parameters
+2022-05-14 14:52:27 MSA          INFO     TEST-(mag_bert) >> loss: 0.6880 
+2022-05-14 14:52:27 MSA          INFO     M: >>  precision: 0.6804  recall: 0.6691  f1_score: 0.6639 
+2022-05-14 14:52:27 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-15 11:51:14 root         INFO     Start running mag_bert...
+2022-05-15 11:51:14 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 11:51:14 root         INFO     Let's use 1 GPUs!
+2022-05-15 11:51:20 MSA          INFO     train samples: (554,)
+2022-05-15 11:51:20 MSA          INFO     valid samples: (136,)
+2022-05-15 11:51:21 MSA          INFO     test samples: (136,)
+2022-05-15 11:51:31 root         INFO     The model has 224184325 trainable parameters
+2022-05-15 11:51:31 MSA          INFO     Init labels...
+2022-05-15 11:51:31 MSA          INFO     Start training...
+2022-05-15 11:51:31 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-15 11:51:31 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-15 11:51:32 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-15 11:51:32 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-15 11:51:33 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-15 11:51:33 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-15 11:54:23 root         INFO     Start running mag_bert...
+2022-05-15 11:54:23 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 11:54:23 root         INFO     Let's use 1 GPUs!
+2022-05-15 11:54:28 MSA          INFO     train samples: (554,)
+2022-05-15 11:54:29 MSA          INFO     valid samples: (136,)
+2022-05-15 11:54:30 MSA          INFO     test samples: (136,)
+2022-05-15 11:54:38 root         INFO     The model has 225369157 trainable parameters
+2022-05-15 11:54:38 MSA          INFO     Init labels...
+2022-05-15 11:54:38 MSA          INFO     Start training...
+2022-05-15 11:54:38 git.cmd      DEBUG    Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=None)
+2022-05-15 11:54:38 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-15 11:54:39 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-15 11:54:39 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): api.wandb.ai
+2022-05-15 11:54:40 urllib3.connectionpool DEBUG    https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2022-05-15 11:54:40 git.cmd      DEBUG    Popen(['git', 'cat-file', '--batch-check'], cwd=/home/dn/Desktop/Projects/MAG_Bert_ULGM, universal_newlines=False, shell=None, istream=<valid stream>)
+2022-05-15 11:54:53 MSA          INFO     TRAIN-(mag_bert) (1/1/1)>> loss: 0.9229 
+2022-05-15 11:54:53 MSA          INFO     M: >>  precision: 0.5822  recall: 0.5578  f1_score: 0.5223 
+2022-05-15 11:54:53 MSA          INFO     VAL-(mag_bert) >> loss: 0.9054 
+2022-05-15 11:54:53 MSA          INFO     M: >>  precision: 0.6052  recall: 0.6029  f1_score: 0.6008 
+2022-05-15 11:54:53 MSA          INFO     新的一轮已经验证
+2022-05-15 11:54:53 MSA          INFO     
+2022-05-15 11:55:03 MSA          INFO     TRAIN-(mag_bert) (1/2/1)>> loss: 0.8637 
+2022-05-15 11:55:03 MSA          INFO     M: >>  precision: 0.6164  recall: 0.6137  f1_score: 0.6115 
+2022-05-15 11:55:03 MSA          INFO     VAL-(mag_bert) >> loss: 1.2850 
+2022-05-15 11:55:03 MSA          INFO     M: >>  precision: 0.7519  recall: 0.5074  f1_score: 0.3495 
+2022-05-15 11:55:03 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:03 MSA          INFO     
+2022-05-15 11:55:08 MSA          INFO     TRAIN-(mag_bert) (2/3/1)>> loss: 0.7575 
+2022-05-15 11:55:08 MSA          INFO     M: >>  precision: 0.6865  recall: 0.6859  f1_score: 0.6857 
+2022-05-15 11:55:08 MSA          INFO     VAL-(mag_bert) >> loss: 1.2097 
+2022-05-15 11:55:08 MSA          INFO     M: >>  precision: 0.4128  recall: 0.4853  f1_score: 0.3503 
+2022-05-15 11:55:08 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:08 MSA          INFO     
+2022-05-15 11:55:13 MSA          INFO     TRAIN-(mag_bert) (3/4/1)>> loss: 0.7460 
+2022-05-15 11:55:13 MSA          INFO     M: >>  precision: 0.7094  recall: 0.7094  f1_score: 0.7094 
+2022-05-15 11:55:13 MSA          INFO     VAL-(mag_bert) >> loss: 1.1762 
+2022-05-15 11:55:13 MSA          INFO     M: >>  precision: 0.6487  recall: 0.5368  f1_score: 0.4294 
+2022-05-15 11:55:13 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:13 MSA          INFO     
+2022-05-15 11:55:18 MSA          INFO     TRAIN-(mag_bert) (4/5/1)>> loss: 0.6900 
+2022-05-15 11:55:18 MSA          INFO     M: >>  precision: 0.7319  recall: 0.7310  f1_score: 0.7308 
+2022-05-15 11:55:18 MSA          INFO     VAL-(mag_bert) >> loss: 1.0171 
+2022-05-15 11:55:18 MSA          INFO     M: >>  precision: 0.5000  recall: 0.5000  f1_score: 0.3460 
+2022-05-15 11:55:18 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:18 MSA          INFO     
+2022-05-15 11:55:23 MSA          INFO     TRAIN-(mag_bert) (5/6/1)>> loss: 0.6938 
+2022-05-15 11:55:23 MSA          INFO     M: >>  precision: 0.6932  recall: 0.6931  f1_score: 0.6931 
+2022-05-15 11:55:23 MSA          INFO     VAL-(mag_bert) >> loss: 0.9646 
+2022-05-15 11:55:23 MSA          INFO     M: >>  precision: 0.6883  recall: 0.5368  f1_score: 0.4201 
+2022-05-15 11:55:23 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:23 MSA          INFO     
+2022-05-15 11:55:28 MSA          INFO     TRAIN-(mag_bert) (6/7/1)>> loss: 0.6493 
+2022-05-15 11:55:28 MSA          INFO     M: >>  precision: 0.7104  recall: 0.7076  f1_score: 0.7066 
+2022-05-15 11:55:28 MSA          INFO     VAL-(mag_bert) >> loss: 0.9281 
+2022-05-15 11:55:28 MSA          INFO     M: >>  precision: 0.6236  recall: 0.5368  f1_score: 0.4381 
+2022-05-15 11:55:28 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:28 MSA          INFO     
+2022-05-15 11:55:32 MSA          INFO     TRAIN-(mag_bert) (7/8/1)>> loss: 0.6175 
+2022-05-15 11:55:33 MSA          INFO     M: >>  precision: 0.7174  recall: 0.7148  f1_score: 0.7140 
+2022-05-15 11:55:33 MSA          INFO     VAL-(mag_bert) >> loss: 0.9701 
+2022-05-15 11:55:33 MSA          INFO     M: >>  precision: 0.7024  recall: 0.6176  f1_score: 0.5729 
+2022-05-15 11:55:33 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:33 MSA          INFO     
+2022-05-15 11:55:37 MSA          INFO     TRAIN-(mag_bert) (8/9/1)>> loss: 0.6540 
+2022-05-15 11:55:37 MSA          INFO     M: >>  precision: 0.7112  recall: 0.7112  f1_score: 0.7112 
+2022-05-15 11:55:38 MSA          INFO     VAL-(mag_bert) >> loss: 0.9301 
+2022-05-15 11:55:38 MSA          INFO     M: >>  precision: 0.6328  recall: 0.5294  f1_score: 0.4157 
+2022-05-15 11:55:38 MSA          INFO     新的一轮已经验证
+2022-05-15 11:55:38 MSA          INFO     
+2022-05-15 11:55:45 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-15 11:55:45 MSA          INFO     M: >>  precision: 0.6052  recall: 0.6029  f1_score: 0.6008 
+2022-05-15 11:55:45 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-15 12:02:19 root         INFO     Start running mag_bert...
+2022-05-15 12:02:19 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 12:02:19 root         INFO     Let's use 1 GPUs!
+2022-05-15 12:02:24 MSA          INFO     train samples: (554,)
+2022-05-15 12:02:25 MSA          INFO     valid samples: (136,)
+2022-05-15 12:02:25 MSA          INFO     test samples: (136,)
+2022-05-15 12:02:36 root         INFO     The model has 225369157 trainable parameters
+2022-05-15 12:02:43 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-15 12:02:43 MSA          INFO     M: >>  precision: 0.6052  recall: 0.6029  f1_score: 0.6008 
+2022-05-15 12:02:44 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-16 10:47:16 root         INFO     Start running mag_bert...
+2022-05-16 10:47:16 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-16 10:47:16 root         INFO     Let's use 1 GPUs!
+2022-05-16 10:47:22 MSA          INFO     train samples: (554,)
+2022-05-16 10:47:22 MSA          INFO     valid samples: (136,)
+2022-05-16 10:47:23 MSA          INFO     test samples: (136,)
+2022-05-16 10:47:35 root         INFO     The model has 225369157 trainable parameters
+2022-05-16 10:47:42 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-16 10:47:42 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 10:47:42 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 10:47:43 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 10:48:41 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/2and3/builtins.pyi
+2022-05-16 10:48:41 parso.cache  DEBUG    pickle loaded: /home/dn/anaconda3/envs/py37/lib/python3.7/site-packages/jedi/third_party/typeshed/stdlib/3/sys.pyi
+2022-05-16 11:13:10 root         INFO     Start running mag_bert...
+2022-05-16 11:13:10 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-16 11:13:10 root         INFO     Let's use 1 GPUs!
+2022-05-16 11:13:16 MSA          INFO     train samples: (554,)
+2022-05-16 11:13:16 MSA          INFO     valid samples: (136,)
+2022-05-16 11:13:17 MSA          INFO     test samples: (136,)
+2022-05-16 11:13:27 root         INFO     The model has 225369157 trainable parameters
+2022-05-16 11:13:34 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-16 11:13:35 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:13:35 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:13:35 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:15:27 root         INFO     Start running mag_bert...
+2022-05-16 11:15:27 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-16 11:15:27 root         INFO     Let's use 1 GPUs!
+2022-05-16 11:15:32 MSA          INFO     train samples: (554,)
+2022-05-16 11:15:33 MSA          INFO     valid samples: (136,)
+2022-05-16 11:15:34 MSA          INFO     test samples: (136,)
+2022-05-16 11:15:44 root         INFO     The model has 225369157 trainable parameters
+2022-05-16 11:15:52 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-16 11:15:52 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:15:52 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:15:52 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:46:22 root         INFO     Start running mag_bert...
+2022-05-16 11:46:22 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'mag_bert', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': True, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 768, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-16 11:46:22 root         INFO     Let's use 1 GPUs!
+2022-05-16 11:46:27 MSA          INFO     train samples: (554,)
+2022-05-16 11:46:28 MSA          INFO     valid samples: (136,)
+2022-05-16 11:46:29 MSA          INFO     test samples: (136,)
+2022-05-16 11:46:39 root         INFO     The model has 225369157 trainable parameters
+2022-05-16 11:46:46 MSA          INFO     TEST-(mag_bert) >> loss: 0.9054 
+2022-05-16 11:46:46 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:46:47 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-16 11:46:47 asyncio      DEBUG    Using selector: EpollSelector

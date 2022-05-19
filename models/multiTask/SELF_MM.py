@@ -80,10 +80,10 @@ class SELF_MM(nn.Module):
         0413 early_fusion lstm 
         
         '''
-        self.norm = nn.BatchNorm1d(126) # 126 is text len with context  : 
-        # self.norm = nn.BatchNorm1d(45-1) # 45 is text len : torch.Size([32, 45, 768])
-        self.lstm = nn.LSTM(33 + 768 + 709, 64, num_layers=1, dropout=0.0, bidirectional=False, batch_first=True)
-        # self.lstm = nn.LSTM(33 + 768 + 2048, 64, num_layers=1, dropout=0.0, bidirectional=False, batch_first=True)
+        # self.norm = nn.BatchNorm1d(126) # 126 is text len with context  : 
+        self.norm = nn.BatchNorm1d(45-1) # 45 is text len : torch.Size([32, 45, 768])
+        # self.lstm = nn.LSTM(33 + 768 + 709, 64, num_layers=1, dropout=0.0, bidirectional=False, batch_first=True)
+        self.lstm = nn.LSTM(33 + 768 + 2048, 64, num_layers=1, dropout=0.0, bidirectional=False, batch_first=True)
         self.dropout = nn.Dropout(0.1)
         self.linear = nn.Linear(64,64)
         self.out = nn.Linear(64,1)
@@ -216,7 +216,7 @@ class SELF_MM(nn.Module):
             'Feature_t': text_h,
             'Feature_a': audio_h,
             'Feature_v': video_h,
-            'Feature_f': fusion_h,
+            'Feature_f': x_f,
         }
         return res
 
@@ -277,8 +277,8 @@ class VideoSubNet(nn.Module):
         self.dropout1 = nn.Dropout(0.7)
         self.dropout2 = nn.Dropout(dropout)
         self.dropout3 = nn.Dropout(dropout)
-        self.linear1 = nn.Linear(709, 64)
-        # self.linear1 = nn.Linear(2048,64)
+        # self.linear1 = nn.Linear(709, 64)
+        self.linear1 = nn.Linear(2048,64)
         self.linear2 = nn.Linear(64,64)
         self.linear3 = nn.Linear(hidden_size, out_size)
 

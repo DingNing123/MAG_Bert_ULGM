@@ -1,0 +1,187 @@
+2022-05-15 10:26:57 root         INFO     Start running self_mm...
+2022-05-15 10:26:57 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:26:57 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:27:03 MSA          INFO     train samples: (554,)
+2022-05-15 10:27:03 MSA          INFO     valid samples: (136,)
+2022-05-15 10:27:04 MSA          INFO     test samples: (136,)
+2022-05-15 10:27:13 root         INFO     The model has 110709698 trainable parameters
+2022-05-15 10:27:13 MSA          INFO     Init labels...
+2022-05-15 10:27:13 MSA          INFO     Start training...
+2022-05-15 10:29:17 root         INFO     Start running self_mm...
+2022-05-15 10:29:17 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:29:17 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:29:21 MSA          INFO     train samples: (554,)
+2022-05-15 10:29:22 MSA          INFO     valid samples: (136,)
+2022-05-15 10:29:23 MSA          INFO     test samples: (136,)
+2022-05-15 10:29:29 root         INFO     The model has 110709534 trainable parameters
+2022-05-15 10:29:29 MSA          INFO     Init labels...
+2022-05-15 10:29:29 MSA          INFO     Start training...
+2022-05-15 10:31:08 root         INFO     Start running self_mm...
+2022-05-15 10:31:08 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:31:08 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:31:12 MSA          INFO     train samples: (554,)
+2022-05-15 10:31:12 MSA          INFO     valid samples: (136,)
+2022-05-15 10:31:13 MSA          INFO     test samples: (136,)
+2022-05-15 10:31:19 root         INFO     The model has 111052318 trainable parameters
+2022-05-15 10:31:19 MSA          INFO     Init labels...
+2022-05-15 10:31:19 MSA          INFO     Start training...
+2022-05-15 10:31:45 root         INFO     Start running self_mm...
+2022-05-15 10:31:45 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:31:45 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:31:47 MSA          INFO     train samples: (554,)
+2022-05-15 10:31:48 MSA          INFO     valid samples: (136,)
+2022-05-15 10:31:49 MSA          INFO     test samples: (136,)
+2022-05-15 10:31:55 root         INFO     The model has 111138014 trainable parameters
+2022-05-15 10:31:55 MSA          INFO     Init labels...
+2022-05-15 10:31:55 MSA          INFO     Start training...
+2022-05-15 10:32:01 MSA          INFO     TRAIN-(self_mm) (1/1/1)>> loss: 0.9177 
+2022-05-15 10:32:01 MSA          INFO     M: >>  precision: 0.6311  recall: 0.5957  f1_score: 0.5664 
+2022-05-15 10:32:01 MSA          INFO     T: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:01 MSA          INFO     A: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:01 MSA          INFO     V: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:02 MSA          INFO     VAL-(self_mm) >> loss: 0.9890 
+2022-05-15 10:32:02 MSA          INFO     M: >>  precision: 0.6883  recall: 0.5368  f1_score: 0.4201 
+2022-05-15 10:32:02 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:02 MSA          INFO     
+2022-05-15 10:32:10 MSA          INFO     TRAIN-(self_mm) (1/2/1)>> loss: 0.6780 
+2022-05-15 10:32:10 MSA          INFO     M: >>  precision: 0.7241  recall: 0.7238  f1_score: 0.7238 
+2022-05-15 10:32:10 MSA          INFO     T: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:10 MSA          INFO     A: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:10 MSA          INFO     V: >>  precision: 0.2500  recall: 0.5000  f1_score: 0.3333 
+2022-05-15 10:32:10 MSA          INFO     VAL-(self_mm) >> loss: 0.9121 
+2022-05-15 10:32:10 MSA          INFO     M: >>  precision: 0.6371  recall: 0.5441  f1_score: 0.4510 
+2022-05-15 10:32:10 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:10 MSA          INFO     
+2022-05-15 10:32:18 MSA          INFO     TRAIN-(self_mm) (1/3/1)>> loss: 1.0075 
+2022-05-15 10:32:18 MSA          INFO     M: >>  precision: 0.7520  recall: 0.7509  f1_score: 0.7506 
+2022-05-15 10:32:18 MSA          INFO     T: >>  precision: 0.4892  recall: 0.4982  f1_score: 0.3924 
+2022-05-15 10:32:18 MSA          INFO     A: >>  precision: 0.2446  recall: 0.4946  f1_score: 0.3273 
+2022-05-15 10:32:18 MSA          INFO     V: >>  precision: 0.4405  recall: 0.4982  f1_score: 0.3646 
+2022-05-15 10:32:19 MSA          INFO     VAL-(self_mm) >> loss: 0.9372 
+2022-05-15 10:32:19 MSA          INFO     M: >>  precision: 0.5872  recall: 0.5147  f1_score: 0.3874 
+2022-05-15 10:32:19 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:19 MSA          INFO     
+2022-05-15 10:32:25 MSA          INFO     TRAIN-(self_mm) (2/4/1)>> loss: 1.0024 
+2022-05-15 10:32:25 MSA          INFO     M: >>  precision: 0.8204  recall: 0.8141  f1_score: 0.8132 
+2022-05-15 10:32:25 MSA          INFO     T: >>  precision: 0.4682  recall: 0.5361  f1_score: 0.4525 
+2022-05-15 10:32:25 MSA          INFO     A: >>  precision: 0.4106  recall: 0.6408  f1_score: 0.5005 
+2022-05-15 10:32:25 MSA          INFO     V: >>  precision: 0.5738  recall: 0.6137  f1_score: 0.5834 
+2022-05-15 10:32:25 MSA          INFO     VAL-(self_mm) >> loss: 0.9226 
+2022-05-15 10:32:25 MSA          INFO     M: >>  precision: 0.6063  recall: 0.5441  f1_score: 0.4661 
+2022-05-15 10:32:25 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:25 MSA          INFO     
+2022-05-15 10:32:31 MSA          INFO     TRAIN-(self_mm) (3/5/1)>> loss: 0.8557 
+2022-05-15 10:32:31 MSA          INFO     M: >>  precision: 0.8571  recall: 0.8556  f1_score: 0.8554 
+2022-05-15 10:32:31 MSA          INFO     T: >>  precision: 0.5064  recall: 0.5307  f1_score: 0.5027 
+2022-05-15 10:32:31 MSA          INFO     A: >>  precision: 0.5520  recall: 0.5523  f1_score: 0.5512 
+2022-05-15 10:32:31 MSA          INFO     V: >>  precision: 0.5031  recall: 0.5126  f1_score: 0.4997 
+2022-05-15 10:32:32 MSA          INFO     VAL-(self_mm) >> loss: 0.8757 
+2022-05-15 10:32:32 MSA          INFO     M: >>  precision: 0.6022  recall: 0.5735  f1_score: 0.5414 
+2022-05-15 10:32:32 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:32 MSA          INFO     
+2022-05-15 10:32:40 MSA          INFO     TRAIN-(self_mm) (1/6/1)>> loss: 0.8071 
+2022-05-15 10:32:40 MSA          INFO     M: >>  precision: 0.8772  recall: 0.8718  f1_score: 0.8714 
+2022-05-15 10:32:40 MSA          INFO     T: >>  precision: 0.7036  recall: 0.6697  f1_score: 0.6460 
+2022-05-15 10:32:40 MSA          INFO     A: >>  precision: 0.5187  recall: 0.4946  f1_score: 0.4764 
+2022-05-15 10:32:40 MSA          INFO     V: >>  precision: 0.4939  recall: 0.6011  f1_score: 0.4952 
+2022-05-15 10:32:40 MSA          INFO     VAL-(self_mm) >> loss: 0.8074 
+2022-05-15 10:32:40 MSA          INFO     M: >>  precision: 0.6075  recall: 0.6029  f1_score: 0.5987 
+2022-05-15 10:32:40 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:40 MSA          INFO     
+2022-05-15 10:32:48 MSA          INFO     TRAIN-(self_mm) (1/7/1)>> loss: 0.7811 
+2022-05-15 10:32:48 MSA          INFO     M: >>  precision: 0.8722  recall: 0.8718  f1_score: 0.8718 
+2022-05-15 10:32:48 MSA          INFO     T: >>  precision: 0.7719  recall: 0.7690  f1_score: 0.7687 
+2022-05-15 10:32:48 MSA          INFO     A: >>  precision: 0.3399  recall: 0.5830  f1_score: 0.4295 
+2022-05-15 10:32:48 MSA          INFO     V: >>  precision: 0.1908  recall: 0.4368  f1_score: 0.2656 
+2022-05-15 10:32:48 MSA          INFO     VAL-(self_mm) >> loss: 0.8673 
+2022-05-15 10:32:48 MSA          INFO     M: >>  precision: 0.6682  recall: 0.5809  f1_score: 0.5184 
+2022-05-15 10:32:48 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:48 MSA          INFO     
+2022-05-15 10:32:54 MSA          INFO     TRAIN-(self_mm) (2/8/1)>> loss: 0.6313 
+2022-05-15 10:32:54 MSA          INFO     M: >>  precision: 0.9220  recall: 0.9206  f1_score: 0.9205 
+2022-05-15 10:32:54 MSA          INFO     T: >>  precision: 0.8776  recall: 0.8773  f1_score: 0.8772 
+2022-05-15 10:32:54 MSA          INFO     A: >>  precision: 0.3441  recall: 0.5866  f1_score: 0.4338 
+2022-05-15 10:32:54 MSA          INFO     V: >>  precision: 0.4948  recall: 0.5144  f1_score: 0.4969 
+2022-05-15 10:32:55 MSA          INFO     VAL-(self_mm) >> loss: 0.8977 
+2022-05-15 10:32:55 MSA          INFO     M: >>  precision: 0.6177  recall: 0.5662  f1_score: 0.5128 
+2022-05-15 10:32:55 MSA          INFO     新的一轮已经验证
+2022-05-15 10:32:55 MSA          INFO     
+2022-05-15 10:33:01 MSA          INFO     TRAIN-(self_mm) (3/9/1)>> loss: 0.6094 
+2022-05-15 10:33:01 MSA          INFO     M: >>  precision: 0.9217  recall: 0.9206  f1_score: 0.9205 
+2022-05-15 10:33:01 MSA          INFO     T: >>  precision: 0.8773  recall: 0.8773  f1_score: 0.8772 
+2022-05-15 10:33:01 MSA          INFO     A: >>  precision: 0.2991  recall: 0.5469  f1_score: 0.3867 
+2022-05-15 10:33:01 MSA          INFO     V: >>  precision: 0.3484  recall: 0.5903  f1_score: 0.4382 
+2022-05-15 10:33:01 MSA          INFO     VAL-(self_mm) >> loss: 0.8288 
+2022-05-15 10:33:01 MSA          INFO     M: >>  precision: 0.6322  recall: 0.6029  f1_score: 0.5797 
+2022-05-15 10:33:01 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:01 MSA          INFO     
+2022-05-15 10:33:07 MSA          INFO     TRAIN-(self_mm) (4/10/1)>> loss: 0.5674 
+2022-05-15 10:33:07 MSA          INFO     M: >>  precision: 0.9333  recall: 0.9332  f1_score: 0.9332 
+2022-05-15 10:33:07 MSA          INFO     T: >>  precision: 0.9048  recall: 0.9043  f1_score: 0.9043 
+2022-05-15 10:33:07 MSA          INFO     A: >>  precision: 0.3091  recall: 0.5560  f1_score: 0.3973 
+2022-05-15 10:33:07 MSA          INFO     V: >>  precision: 0.2665  recall: 0.5162  f1_score: 0.3515 
+2022-05-15 10:33:07 MSA          INFO     VAL-(self_mm) >> loss: 0.8607 
+2022-05-15 10:33:07 MSA          INFO     M: >>  precision: 0.5935  recall: 0.5809  f1_score: 0.5662 
+2022-05-15 10:33:07 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:07 MSA          INFO     
+2022-05-15 10:33:13 MSA          INFO     TRAIN-(self_mm) (5/11/1)>> loss: 0.5856 
+2022-05-15 10:33:13 MSA          INFO     M: >>  precision: 0.9155  recall: 0.9116  f1_score: 0.9113 
+2022-05-15 10:33:13 MSA          INFO     T: >>  precision: 0.8924  recall: 0.8917  f1_score: 0.8916 
+2022-05-15 10:33:13 MSA          INFO     A: >>  precision: 0.3031  recall: 0.5505  f1_score: 0.3910 
+2022-05-15 10:33:13 MSA          INFO     V: >>  precision: 0.4017  recall: 0.4224  f1_score: 0.3557 
+2022-05-15 10:33:14 MSA          INFO     VAL-(self_mm) >> loss: 0.8718 
+2022-05-15 10:33:14 MSA          INFO     M: >>  precision: 0.5986  recall: 0.5662  f1_score: 0.5273 
+2022-05-15 10:33:14 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:14 MSA          INFO     
+2022-05-15 10:33:20 MSA          INFO     TRAIN-(self_mm) (6/12/1)>> loss: 0.5476 
+2022-05-15 10:33:20 MSA          INFO     M: >>  precision: 0.9212  recall: 0.9188  f1_score: 0.9187 
+2022-05-15 10:33:20 MSA          INFO     T: >>  precision: 0.8940  recall: 0.8881  f1_score: 0.8877 
+2022-05-15 10:33:20 MSA          INFO     A: >>  precision: 0.3316  recall: 0.5758  f1_score: 0.4208 
+2022-05-15 10:33:20 MSA          INFO     V: >>  precision: 0.4806  recall: 0.5126  f1_score: 0.4337 
+2022-05-15 10:33:20 MSA          INFO     VAL-(self_mm) >> loss: 0.9208 
+2022-05-15 10:33:20 MSA          INFO     M: >>  precision: 0.5294  recall: 0.5294  f1_score: 0.5293 
+2022-05-15 10:33:20 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:20 MSA          INFO     
+2022-05-15 10:33:26 MSA          INFO     TRAIN-(self_mm) (7/13/1)>> loss: 0.4291 
+2022-05-15 10:33:26 MSA          INFO     M: >>  precision: 0.9621  recall: 0.9621  f1_score: 0.9621 
+2022-05-15 10:33:26 MSA          INFO     T: >>  precision: 0.9533  recall: 0.9531  f1_score: 0.9531 
+2022-05-15 10:33:26 MSA          INFO     A: >>  precision: 0.3295  recall: 0.5740  f1_score: 0.4187 
+2022-05-15 10:33:26 MSA          INFO     V: >>  precision: 0.2646  recall: 0.5144  f1_score: 0.3495 
+2022-05-15 10:33:27 MSA          INFO     VAL-(self_mm) >> loss: 0.9849 
+2022-05-15 10:33:27 MSA          INFO     M: >>  precision: 0.5262  recall: 0.5221  f1_score: 0.5024 
+2022-05-15 10:33:27 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:27 MSA          INFO     
+2022-05-15 10:33:33 MSA          INFO     TRAIN-(self_mm) (8/14/1)>> loss: 0.4379 
+2022-05-15 10:33:33 MSA          INFO     M: >>  precision: 0.9464  recall: 0.9458  f1_score: 0.9458 
+2022-05-15 10:33:33 MSA          INFO     T: >>  precision: 0.9390  recall: 0.9386  f1_score: 0.9386 
+2022-05-15 10:33:33 MSA          INFO     A: >>  precision: 0.4199  recall: 0.6480  f1_score: 0.5096 
+2022-05-15 10:33:33 MSA          INFO     V: >>  precision: 0.3527  recall: 0.5939  f1_score: 0.4425 
+2022-05-15 10:33:33 MSA          INFO     VAL-(self_mm) >> loss: 0.8343 
+2022-05-15 10:33:33 MSA          INFO     M: >>  precision: 0.6358  recall: 0.5956  f1_score: 0.5633 
+2022-05-15 10:33:33 MSA          INFO     新的一轮已经验证
+2022-05-15 10:33:33 MSA          INFO     
+2022-05-15 10:33:34 MSA          INFO     TEST-(self_mm) >> loss: 0.8074 
+2022-05-15 10:33:34 MSA          INFO     M: >>  precision: 0.6075  recall: 0.6029  f1_score: 0.5987 
+2022-05-15 10:33:34 root         INFO     Results are added to /media/dn/newdisk/datasets/Self-MM/results/results/normals/mustard-regression-0404.csv...
+2022-05-15 10:40:03 root         INFO     Start running self_mm...
+2022-05-15 10:40:03 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:40:03 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:40:09 MSA          INFO     train samples: (554,)
+2022-05-15 10:40:09 MSA          INFO     valid samples: (136,)
+2022-05-15 10:40:10 MSA          INFO     test samples: (136,)
+2022-05-15 10:40:16 root         INFO     The model has 111138014 trainable parameters
+2022-05-15 10:40:20 MSA          INFO     TEST-(self_mm) >> loss: 0.8074 
+2022-05-15 10:40:20 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-15 10:40:20 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-15 10:40:20 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-15 10:48:10 root         INFO     Start running self_mm...
+2022-05-15 10:48:10 root         DEBUG    <Storage{'is_tune': False, 'ablationType': 'indep_resnet', 'key_eval': 'Loss', 'train_mode': 'regression', 'modelName': 'self_mm', 'datasetName': 'mustard', 'num_workers': 0, 'model_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/models', 'res_save_dir': '/media/dn/newdisk/datasets/Self-MM/results/results/normals', 'gpu_ids': [0], 'seeds': [1114], 'dataPath': '/media/dn/newdisk/datasets/mmsd_raw_data/Self-MM-Processed/featuresIndepResnet152.pkl', 'seq_lens': (51, 615, 118), 'feature_dims': (768, 33, 2048), 'train_samples': 552, 'num_classes': 3, 'language': 'en', 'KeyEval': 'Loss', 'need_data_aligned': False, 'need_model_aligned': False, 'need_normalized': False, 'use_bert': True, 'use_finetune': True, 'save_labels': False, 'early_stop': 8, 'update_epochs': 1, 'batch_size': 8, 'learning_rate_bert': 5e-05, 'learning_rate_audio': 0.005, 'learning_rate_video': 0.005, 'learning_rate_other': 0.001, 'weight_decay_bert': 0.001, 'weight_decay_audio': 0.01, 'weight_decay_video': 0.01, 'weight_decay_other': 0.001, 'a_lstm_hidden_size': 16, 'v_lstm_hidden_size': 64, 'a_lstm_layers': 1, 'v_lstm_layers': 1, 'text_out': 768, 'audio_out': 16, 'video_out': 64, 'a_lstm_dropout': 0.0, 'v_lstm_dropout': 0.0, 't_bert_dropout': 0.1, 'post_fusion_dim': 64, 'post_text_dim': 64, 'post_audio_dim': 16, 'post_video_dim': 64, 'post_fusion_dropout': 0.0, 'post_text_dropout': 0.1, 'post_audio_dropout': 0.1, 'post_video_dropout': 0.1, 'H': 1.0, 'seed': 1114}>
+2022-05-15 10:48:10 root         INFO     Let's use 1 GPUs!
+2022-05-15 10:48:15 MSA          INFO     train samples: (554,)
+2022-05-15 10:48:16 MSA          INFO     valid samples: (136,)
+2022-05-15 10:48:16 MSA          INFO     test samples: (136,)
+2022-05-15 10:48:24 root         INFO     The model has 111138014 trainable parameters
+2022-05-15 10:48:27 MSA          INFO     TEST-(self_mm) >> loss: 0.8074 
+2022-05-15 10:48:27 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-15 10:48:28 asyncio      DEBUG    Using selector: EpollSelector
+2022-05-15 10:48:28 asyncio      DEBUG    Using selector: EpollSelector

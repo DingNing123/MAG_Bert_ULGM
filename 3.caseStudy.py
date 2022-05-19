@@ -1,3 +1,8 @@
+'''
+case study
+model_path='/media/dn/newdisk/datasets/Self-MM/results/models/mag_bert-mustard-regression.pth'
+print(model_path)
+'''
 import os
 import gc
 import time
@@ -68,23 +73,10 @@ def run(args):
         return answer
     logger.info(f'The model has {count_parameters(model)} trainable parameters')
 
-#   from thop import profile
-#   input_tmp = torch.randn().to(device)
-#   flops, params = profile(model, (input_tmp,))
-#   logger.info(f"FLOPS:{flops / 10 ** 9:.04}G", f"params:{params / 1024 ** 2:.04}MB")
-
-    # using multiple gpus
-    # if using_cuda and len(args.gpu_ids) > 1:
-    #     model = torch.nn.DataParallel(model,
-    #                                   device_ids=args.gpu_ids,
-    #                                   output_device=args.gpu_ids[0])
-    # 0318 在这里应该更新 args 参数
-    # train_samples sel_lens feature_dims 
-    # 在 "data/load_data.py" 162 lines --33%-- 这里修改了 
 
     atio = ATIO().getTrain(args)
     # do train
-    best_epoch = atio.do_train(model, dataloader)
+    # best_epoch = atio.do_train(model, dataloader)
     # atio.do_train(model, dataloader) 0404 before it return None
     # load pretrained model
     assert os.path.exists(args.model_save_path)
@@ -92,6 +84,7 @@ def run(args):
     model.to(device)
 
     # do test
+    # import ipdb;ipdb.set_trace()
     if args.tune_mode:
         # using valid dataset to debug hyper parameters
         results = atio.do_test(model, dataloader['valid'], mode="VALID")
@@ -103,7 +96,7 @@ def run(args):
     gc.collect()
 
     # here add results['best_epoch'] = best_epoch  0404  add best_epoch result 
-    results['best_epoch'] = best_epoch 
+    # results['best_epoch'] = best_epoch 
     return results
 
 def run_tune(args, tune_times=50):

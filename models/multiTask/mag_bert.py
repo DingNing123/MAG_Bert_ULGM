@@ -19,9 +19,9 @@ import wandb
 # Mustard SETTING
 ACOUSTIC_DIM = 33
 # 最优的实验是在2048维特征中得到的。
-# VISUAL_DIM = 2048
+VISUAL_DIM = 2048
 # 上下文的消融实验是在709维的特征下做的。
-VISUAL_DIM = 709
+# VISUAL_DIM = 709
 TEXT_DIM = 768
 
 # MOSI SETTING
@@ -369,7 +369,7 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
             'Feature_t': text_h,
             'Feature_a': audio_h,
             'Feature_v': video_h,
-            'Feature_f': fusion_h,
+            'Feature_f': pooled_output,
         }
         return res
 
@@ -636,9 +636,9 @@ class VideoSubNet(nn.Module):
         self.dropout1 = nn.Dropout(0.7)
         self.dropout2 = nn.Dropout(dropout)
         self.dropout3 = nn.Dropout(dropout)
-        self.linear1 = nn.Linear(709,64) # mustard openface2.0
+        # self.linear1 = nn.Linear(709,64) # mustard openface2.0
         # self.linear1 = nn.Linear(20,64) # mosi
-        # self.linear1 = nn.Linear(2048,64) # mustard
+        self.linear1 = nn.Linear(2048,64) # mustard
         self.linear2 = nn.Linear(64,64)
         self.linear3 = nn.Linear(hidden_size, out_size)
 

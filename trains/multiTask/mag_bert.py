@@ -27,8 +27,8 @@ class MAG_BERT():
 
         self.args = args
         # self.args.tasks = "MTAV"
-        self.args.tasks = "MT"
-        # self.args.tasks = "M"
+        # self.args.tasks = "MT"
+        self.args.tasks = "M"
         self.metrics = MetricsTop(args.train_mode).getMetics(args.datasetName)
 
         self.feature_map = {
@@ -264,6 +264,10 @@ class MAG_BERT():
         model.eval()
         y_pred = {'M': [], 'T': [], 'A': [], 'V': []}
         y_true = {'M': [], 'T': [], 'A': [], 'V': []}
+        ID = []
+        caseStudyDict = {}
+        # 生成tsne的输入文件npz,需要单独运行6.生成tsne的输入文件npz.py生成 不可以在训练的过程中生成，那样生成的不是最好的结果。
+        repre=[]
         eval_loss = 0.0
         # criterion = nn.L1Loss()
         with torch.no_grad():
@@ -284,9 +288,52 @@ class MAG_BERT():
                     eval_loss += loss.item()
                     y_pred['M'].append(outputs['M'].cpu())
                     y_true['M'].append(labels_m.cpu())
+                    #import ipdb;ipdb.set_trace()
+                    ID.extend(batch_data['id'])
+                    ff = outputs['Feature_f'].cpu()
+                    repre.append(ff)
+                    
+
+
         eval_loss = eval_loss / len(dataloader)
         logger.info(mode+"-(%s)" % self.args.modelName + " >> loss: %.4f " % eval_loss)
         pred, true = torch.cat(y_pred['M']), torch.cat(y_true['M'])
+        # 生成混淆矩阵.npz
+        y_pred = pred.view(-1)
+        y_true = true
+        y_pred = [-1 if i.item()<0 else 1 for i in y_pred]
+        y_true = [-1 if i.item()<0 else 1 for i in y_true]
+        import ipdb;ipdb.set_trace()
+        # 生成判断错误的柱形图
+        np.savez('bar.npz',y_true=y_true,y_pred=y_pred,id=ID)
+        print('saved in bar.npz')
+
+        from sklearn.metrics import confusion_matrix
+        res = confusion_matrix(y_true,y_pred,labels=[-1,1])
+        np.savez('confusion_matrix.npz',res=res)
+        print('saved in confusion_matrix.npz')
+
+        repres = torch.cat(repre)
+        np.savez('magbert.npz',repre=repres,label=true)
+        print('saved in magbert.npz')
+
+        import json
+        # 将模型的结果输出到case_study.json 
+        for i,id in enumerate(ID):
+            caseStudyDict[id] = {'true': true[i].item(),'pred': pred[i][0].item()}
+            with open('case_study.json','w') as f:
+                json.dump(caseStudyDict,f)
+
+        print('pred right:')
+        for id in ID:
+            if caseStudyDict[id]['true'] * caseStudyDict[id]['pred'] > 0:
+                print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+
+        print('pred error:')
+        for id in ID:
+            if caseStudyDict[id]['true'] * caseStudyDict[id]['pred'] < 0:
+                print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+
         eval_results = self.metrics(pred, true)
         logger.info('M: >> ' + dict_to_str(eval_results))
         eval_results['Loss'] = eval_loss

@@ -146,7 +146,7 @@ class ConfigRegression():
             'use_bert': True,
             'use_finetune': True,
             'save_labels': False,
-            'early_stop': 20,
+            'early_stop': 8,
             'update_epochs': 1
             },
             'datasetParas':{
@@ -175,7 +175,9 @@ class ConfigRegression():
                     'v_lstm_dropout': 0.0,
                     't_bert_dropout':0.1,
                     # post feature
-                    'post_fusion_dim': 64,
+                    # 'post_fusion_dim': 64,
+                    # 768 为了特征可视化修改该参数
+                    'post_fusion_dim': 768,
                     'post_text_dim':64,
                     'post_audio_dim': 16,
                     # 32->64 post_video_dim for vision:2048 0403

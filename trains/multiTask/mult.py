@@ -239,6 +239,7 @@ class MULT():
         y_pred = {'M': [], 'T': [], 'A': [], 'V': []}
         y_true = {'M': [], 'T': [], 'A': [], 'V': []}
         eval_loss = 0.0
+        repre=[]
         # criterion = nn.L1Loss()
         with torch.no_grad():
             with tqdm(dataloader) as td:
@@ -258,9 +259,16 @@ class MULT():
                     eval_loss += loss.item()
                     y_pred['M'].append(outputs['M'].cpu())
                     y_true['M'].append(labels_m.cpu())
+                    ff = outputs['Feature_f'].cpu()
+                    repre.append(ff)
         eval_loss = eval_loss / len(dataloader)
         logger.info(mode+"-(%s)" % self.args.modelName + " >> loss: %.4f " % eval_loss)
         pred, true = torch.cat(y_pred['M']), torch.cat(y_true['M'])
+        import ipdb;ipdb.set_trace()
+        repres = torch.cat(repre)
+        np.savez('mult.npz',repre=repres,label=true)
+        print('saved in mult.npz')
+
         eval_results = self.metrics(pred, true)
         logger.info('M: >> ' + dict_to_str(eval_results))
         eval_results['Loss'] = eval_loss

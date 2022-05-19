@@ -15,4 +15,12 @@
 
  ./0428.sh
 
-### 
+### 6.生成各种可视化需要的npz文件.py  
+ 1. tsne
+ 2. confusion_matrix
+
+### 模型说明：
+ours_v1 : Self_MM
+ours_v2 : mag_bert
+
+其他集中模型的源代码参考项目mmsa
