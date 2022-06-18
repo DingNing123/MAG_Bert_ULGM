@@ -1,4 +1,6 @@
 # self supervised multimodal multi-task learning network
+# 融合两个Bert到一个Bert，共享参数，但是试验之后发现，性能并不如两个bert各有各的参数效果好。
+# 6月17日
 import os
 import sys
 import collections
@@ -126,6 +128,7 @@ class MAG_BertModel(BertPreTrainedModel):
         encoder_attention_mask=None,
         output_attentions=None,
         output_hidden_states=None,
+        singleTask = False,
     ):
         
         output_attentions = (
@@ -200,10 +203,14 @@ class MAG_BertModel(BertPreTrainedModel):
             inputs_embeds=inputs_embeds,
         )
 
-        # Early fusion with MAG
-        fused_embedding = self.MAG(embedding_output, visual, acoustic)
-
+        # Early fusion with MAG 
+        # 如果是单任务，则不通过MAG门控网络
         # import ipdb;ipdb.set_trace()
+        if singleTask:
+            fused_embedding = embedding_output
+        else:
+            fused_embedding = self.MAG(embedding_output, visual, acoustic)
+
 
         encoder_outputs = self.encoder(
             fused_embedding,
@@ -214,10 +221,11 @@ class MAG_BertModel(BertPreTrainedModel):
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
         )
+        # import ipdb;ipdb.set_trace()
 
         sequence_output = encoder_outputs[0]
         pooled_output = self.pooler(sequence_output)
-
+        # 单任务提取pooled_output
         outputs = (sequence_output, pooled_output,) + encoder_outputs[
             1:
         ]  # add hidden_states and attentions if they are here
@@ -235,7 +243,7 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
 
         audio_in, video_in = args.feature_dims[1:]
 
-        self.text_model = BertTextEncoder(language=args.language, use_finetune=args.use_finetune)
+        # self.text_model = BertTextEncoder(language=args.language, use_finetune=args.use_finetune)
         self.audio_model = AuViSubNet(audio_in, args.a_lstm_hidden_size, args.audio_out, \
                             num_layers=args.a_lstm_layers, dropout=args.a_lstm_dropout)
         self.video_model = VideoSubNet(video_in, args.v_lstm_hidden_size, args.video_out, \
@@ -282,11 +290,34 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
     ):
         # 因为在模型对齐的代码中进行了转置，因此这里调整过来
         input_ids = input_ids.transpose(1,2)
-        text = self.text_model(input_ids)[:,0,:]
+        # import ipdb;ipdb.set_trace()
+        input_ids_voc = input_ids[:,0,:].long() # torch.Size([32, 45])
+
+        # 6月17日，融合多任务模型中的两个bert为1个，共享参数，根据经验，可以提升性能
+        text_outputs = self.bert(
+            input_ids_voc , 
+            visual,
+            acoustic,
+            # visual = None,  
+            # acoustic = None ,
+            attention_mask=attention_mask,
+            token_type_ids=token_type_ids,
+            position_ids=position_ids,
+            head_mask=head_mask,
+            inputs_embeds=inputs_embeds,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            singleTask = True
+        )
+        text = text_outputs[1]
+        
+        # text = self.text_model(input_ids)[:,0,:]
         mask_len = torch.sum(input_ids[:,1,:], dim=1, keepdim=True)
         text_lengths = mask_len.squeeze().int().detach().cpu()
         audio = self.audio_model(acoustic, text_lengths)
         video = self.video_model(visual, text_lengths)
+
+        # import ipdb;ipdb.set_trace()
 
         fusion_h = torch.cat([text, audio, video], dim=-1)
         fusion_h = self.post_fusion_dropout(fusion_h)
@@ -314,14 +345,13 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
 
         # import ipdb;ipdb.set_trace()
 
-        input_ids = input_ids[:,0,:].long() # torch.Size([32, 45])
         # 因为进行了模型的对齐，因此不再具备序列长度的元组记录，注释以下语句
         # visual = visual[0]
         # acoustic = acoustic[0]
         # import ipdb;ipdb.set_trace()
 
         outputs = self.bert(
-            input_ids,
+            input_ids_voc,
             visual,
             acoustic,
             attention_mask=attention_mask,
@@ -331,6 +361,7 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
             inputs_embeds=inputs_embeds,
             output_attentions=output_attentions,
             output_hidden_states=output_hidden_states,
+            singleTask = False,
         )
 
         pooled_output = outputs[1]
@@ -376,208 +407,6 @@ class MAG_BertForSequenceClassification(BertPreTrainedModel):
         # return outputs
 
 
-class MAG_BERT(nn.Module):
-    def __init__(self, args):
-        super(MAG_BERT, self).__init__()
-        # text subnets
-        self.aligned = args.need_data_aligned
-        self.text_model = BertTextEncoder(language=args.language, use_finetune=args.use_finetune)
-
-        # audio-vision subnets
-        audio_in, video_in = args.feature_dims[1:]
-        self.audio_model = AuViSubNet(audio_in, args.a_lstm_hidden_size, args.audio_out, \
-                            num_layers=args.a_lstm_layers, dropout=args.a_lstm_dropout)
-        # change 32 -> 64 args.video_out = 64 2022年 04月 02日 星期六 16:47:28 CST
-        # in conig/config_regression.py:266
-        # args.text_out = 768
-        # args.audio_out = 16 
-        # args.video_out = 64 changed 32->64
-        # args.post_video_dim = 64 changed 32->64
-        self.video_model = VideoSubNet(video_in, args.v_lstm_hidden_size, args.video_out, \
-                            num_layers=args.v_lstm_layers, dropout=args.v_lstm_dropout)
-
-        # the post_fusion layers
-        self.post_fusion_dropout = nn.Dropout(p=0.0)
-        self.post_fusion_layer_1 = nn.Linear(args.text_out + args.video_out + args.audio_out , args.post_fusion_dim)
-        self.post_fusion_layer_2 = nn.Linear(args.post_fusion_dim, args.post_fusion_dim)
-        self.post_fusion_layer_3 = nn.Linear(args.post_fusion_dim, 1)
-
-        # second level fusion modulle
-        # args.post_fusion_dim = 128
-        self.post_fusion_layer_4 = nn.Linear(args.post_fusion_dim + args.text_out + args.video_out + args.audio_out , args.post_fusion_dim)
-        self.post_fusion_layer_5 = nn.Linear(64,64)
-        self.post_fusion_layer_5_1 = nn.Linear(64,64)
-        # layer 6 is same for 3 , layer 3 is useless 
-        self.post_fusion_layer_6 = nn.Linear(64, 1)
-
-        # the classify layer for text
-        self.post_text_dropout = nn.Dropout(p=args.post_text_dropout)
-        self.post_text_layer_1 = nn.Linear(args.text_out, args.post_text_dim)
-        self.post_text_layer_2 = nn.Linear(args.post_text_dim, args.post_text_dim)
-        self.post_text_layer_3 = nn.Linear(args.post_text_dim, 1)
-
-        # the classify layer for audio
-        self.post_audio_dropout = nn.Dropout(p=args.post_audio_dropout)
-        self.post_audio_layer_1 = nn.Linear(args.audio_out, args.post_audio_dim)
-        self.post_audio_layer_2 = nn.Linear(args.post_audio_dim, args.post_audio_dim)
-        self.post_audio_layer_3 = nn.Linear(args.post_audio_dim, 1)
-
-        # the classify layer for video
-        self.post_video_dropout = nn.Dropout(p=args.post_video_dropout)
-        self.post_video_layer_1 = nn.Linear(args.video_out, args.post_video_dim)
-        self.post_video_layer_2 = nn.Linear(args.post_video_dim, args.post_video_dim)
-        self.post_video_layer_3 = nn.Linear(args.post_video_dim, 1)
-
-        '''
-        # 0405 attention inspired by ../mmsa/models/singleTask/MFN.py
-        attInShape = 64
-        h_att1 = 64 
-        att1_dropout = 0.7 
-        self.att1_fc1 = nn.Linear(attInShape, h_att1)
-        self.att1_fc2 = nn.Linear(h_att1, attInShape)
-        self.att1_dropout = nn.Dropout(att1_dropout)
-        '''
-
-        '''
-        0413 early_fusion lstm 
-        
-        '''
-        self.norm = nn.BatchNorm1d(45-1) # 45 is text len : torch.Size([32, 45, 768])
-        self.lstm = nn.LSTM(33 + 768 + 2048, 64, num_layers=1, dropout=0.0, bidirectional=False, batch_first=True)
-        self.dropout = nn.Dropout(0.1)
-        self.linear = nn.Linear(64,64)
-        self.out = nn.Linear(64,1)
-
-        
-
-
-    def forward(self, text, audio, video):
-        audio, audio_lengths = audio
-        video, video_lengths = video
-
-        mask_len = torch.sum(text[:,1,:], dim=1, keepdim=True)
-        text_lengths = mask_len.squeeze().int().detach().cpu()
-
-        # 0412 align subnet 
-        text_x = self.text_model(text)[:,1:,:]
-        self.dst_len = text_x.size(1) # 45
-        audio_x = audio
-        video_x = video 
-
-        def align(x):
-            raw_seq_len = x.size(1)
-            if raw_seq_len == self.dst_len:
-                return x
-            if raw_seq_len // self.dst_len == raw_seq_len / self.dst_len:
-                pad_len = 0
-                pool_size = raw_seq_len // self.dst_len
-            else:
-                pad_len = self.dst_len - raw_seq_len % self.dst_len
-                pool_size = raw_seq_len // self.dst_len + 1
-            pad_x = x[:, -1, :].unsqueeze(1).expand([x.size(0), pad_len, x.size(-1)])
-            x = torch.cat([x, pad_x], dim=1).view(x.size(0), pool_size, self.dst_len, -1)
-            x = x.mean(dim=1)
-            return x
-        text_x = align(text_x)
-        audio_x = align(audio_x)
-        video_x = align(video_x)
-
-        # 0413 Early_fusion LSTM
-        x = torch.cat([text_x, audio_x, video_x], dim=-1)
-        x = self.norm(x)
-        _, final_states = self.lstm(x)
-        x = self.dropout(final_states[0][-1].squeeze(dim=0))
-        x = F.relu(self.linear(x), inplace=True)
-        x = self.dropout(x)
-        ef_lstm_h = x
-        ef_lstm_output = self.out(x)
-
-        text = self.text_model(text)[:,0,:]
-
-        if self.aligned:
-            audio = self.audio_model(audio, text_lengths)
-            video = self.video_model(video, text_lengths)
-        else:
-            audio = self.audio_model(audio, audio_lengths)
-            video = self.video_model(video, video_lengths)
-
-        '''
-        0411 delete 64->64 self-attention
-        # 0405 attention inspired by ../mmsa/models/singleTask/MFN.py
-        attention = F.softmax(self.att1_fc2(self.att1_dropout(F.relu(self.att1_fc1(video)))),dim=1)
-        cStar = video 
-        attended = attention*cStar
-        # residual 
-        video = attended + video 
-        '''
-        
-        # fusion 0415 放弃后期融合  
-        fusion_h = torch.cat([text, audio, video], dim=-1)
-        fusion_h = self.post_fusion_dropout(fusion_h)
-        fusion_h = F.relu(self.post_fusion_layer_1(fusion_h), inplace=False)
-
-        # text
-        text_h = self.post_text_dropout(text)
-        text_h = F.relu(self.post_text_layer_1(text_h), inplace=False)
-        # audio
-        audio_h = self.post_audio_dropout(audio)
-        audio_h = F.relu(self.post_audio_layer_1(audio_h), inplace=False)
-        # vision
-        video_h = self.post_video_dropout(video)
-        video_h = F.relu(self.post_video_layer_1(video_h), inplace=False)
-
-        # classifier-fusion
-        # 0415 give up late fusion 
-        '''
-        x_f = F.relu(self.post_fusion_layer_2(fusion_h), inplace=False)
-        x_f = torch.cat([x_f, text, audio, video], dim=-1)
-        # layer_3 is useless 
-        # output_fusion = self.post_fusion_layer_3(x_f)
-        x_f = F.relu(self.post_fusion_layer_4(x_f), inplace=False)
-        '''
-        # after layer_4 save x_f as fusion_h for unimodal label generation 0403
-        # 0414 
-        # 只是用text模态，考虑bert模型的性能。
-        # x_f = text 
-        # fusion_h = x_f 
-        # x_f = torch.cat((ef_lstm_h,text),dim=-1)
-        # 0415 修改为只使用ef-lstm的情况。
-        x_f = ef_lstm_h
-        # 0415 ulgm
-        # fusion_h = x_f
-        
-        x_f = self.post_fusion_dropout(x_f)
-        x_f = F.relu(self.post_fusion_layer_5(x_f), inplace=False)
-        x_f = F.relu(self.post_fusion_layer_5_1(x_f), inplace=False)
-        output_fusion = self.post_fusion_layer_6(x_f)
-
-        # classifier-text
-        x_t = F.relu(self.post_text_layer_2(text_h), inplace=False)
-        output_text = self.post_text_layer_3(x_t)
-
-        # classifier-audio
-        x_a = F.relu(self.post_audio_layer_2(audio_h), inplace=False)
-        output_audio = self.post_audio_layer_3(x_a)
-
-        # classifier-vision
-        x_v = F.relu(self.post_video_layer_2(video_h), inplace=False)
-        output_video = self.post_video_layer_3(x_v)
-
-        # output_fusion出现nan情况,查看原因
-        if output_fusion.isnan().any():
-            pdb.set_trace()
-
-        res = {
-            'M': output_fusion, 
-            'T': output_text,
-            'A': output_audio,
-            'V': output_video,
-            'Feature_t': text_h,
-            'Feature_a': audio_h,
-            'Feature_v': video_h,
-            'Feature_f': fusion_h,
-        }
-        return res
 
 class AuViSubNet(nn.Module):
     def __init__(self, in_size, hidden_size, out_size, num_layers=1, dropout=0.2, bidirectional=False):

@@ -81,14 +81,14 @@ class MAG_BERT():
     def do_train(self, model, dataloader):
         # 第一部分: 设置学习率和优化器策略和模型参数衰减的策略
         bert_no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
-        bert_params = list(model.Model.text_model.named_parameters())
+        # bert_params = list(model.Model.text_model.named_parameters())
         bert_params_1 = list(model.Model.bert.named_parameters())
         audio_params = list(model.Model.audio_model.named_parameters())
         video_params = list(model.Model.video_model.named_parameters())
 
-        bert_params_decay = [p for n, p in bert_params if not any(nd in n for nd in bert_no_decay)]
+        # bert_params_decay = [p for n, p in bert_params if not any(nd in n for nd in bert_no_decay)]
         bert_params_decay_1 = [p for n, p in bert_params_1 if not any(nd in n for nd in bert_no_decay)]
-        bert_params_no_decay = [p for n, p in bert_params if any(nd in n for nd in bert_no_decay)]
+        # bert_params_no_decay = [p for n, p in bert_params if any(nd in n for nd in bert_no_decay)]
         bert_params_no_decay_1 = [p for n, p in bert_params_1 if any(nd in n for nd in bert_no_decay)]
         audio_params = [p for n, p in audio_params]
         video_params = [p for n, p in video_params]
@@ -97,9 +97,9 @@ class MAG_BERT():
 
         # 'learning_rate_bert': 5e-5,
         optimizer_grouped_parameters = [
-            {'params': bert_params_decay, 'weight_decay': self.args.weight_decay_bert, 'lr': self.args.learning_rate_bert},
+            # {'params': bert_params_decay, 'weight_decay': self.args.weight_decay_bert, 'lr': self.args.learning_rate_bert},
             {'params': bert_params_decay_1, 'weight_decay': 0.01, 'lr': 1e-5},
-            {'params': bert_params_no_decay, 'weight_decay': 0.0, 'lr': self.args.learning_rate_bert},
+            # {'params': bert_params_no_decay, 'weight_decay': 0.0, 'lr': self.args.learning_rate_bert},
             {'params': bert_params_no_decay_1, 'weight_decay': 0.0, 'lr': 1e-5},
             {'params': audio_params, 'weight_decay': self.args.weight_decay_audio, 'lr': self.args.learning_rate_audio},
             {'params': video_params, 'weight_decay': self.args.weight_decay_video, 'lr': self.args.learning_rate_video},
@@ -303,19 +303,21 @@ class MAG_BERT():
         y_true = true
         y_pred = [-1 if i.item()<0 else 1 for i in y_pred]
         y_true = [-1 if i.item()<0 else 1 for i in y_true]
-        import ipdb;ipdb.set_trace()
+        # import ipdb;ipdb.set_trace()
         # 生成判断错误的柱形图
         np.savez('bar.npz',y_true=y_true,y_pred=y_pred,id=ID)
-        print('saved in bar.npz')
+        # print('saved in bar.npz')
+        logger.debug('saved in bar.npz')
 
         from sklearn.metrics import confusion_matrix
         res = confusion_matrix(y_true,y_pred,labels=[-1,1])
         np.savez('confusion_matrix.npz',res=res)
-        print('saved in confusion_matrix.npz')
+        logger.debug('saved in confusion_matrix.npz')
+        # print('saved in confusion_matrix.npz')
 
         repres = torch.cat(repre)
         np.savez('magbert.npz',repre=repres,label=true)
-        print('saved in magbert.npz')
+        logger.debug('saved in magbert.npz')
 
         import json
         # 将模型的结果输出到case_study.json 
@@ -324,15 +326,20 @@ class MAG_BERT():
             with open('case_study.json','w') as f:
                 json.dump(caseStudyDict,f)
 
-        print('pred right:')
+        # import ipdb;ipdb.set_trace()
+        # print('pred right:')
+        logger.debug('pred right:')
         for id in ID:
             if caseStudyDict[id]['true'] * caseStudyDict[id]['pred'] > 0:
-                print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+                # print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+                logger.debug(id + ' ' +  str(caseStudyDict[id]['true']) + ' ' + str(caseStudyDict[id]['pred']))
 
-        print('pred error:')
+        # print('pred error:')
+        logger.debug('pred error:')
         for id in ID:
             if caseStudyDict[id]['true'] * caseStudyDict[id]['pred'] < 0:
-                print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+                # print(id,caseStudyDict[id]['true'],caseStudyDict[id]['pred'])
+                logger.debug(id + ' ' +  str(caseStudyDict[id]['true']) + ' ' + str(caseStudyDict[id]['pred']))
 
         eval_results = self.metrics(pred, true)
         logger.info('M: >> ' + dict_to_str(eval_results))

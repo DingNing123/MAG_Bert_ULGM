@@ -67,6 +67,7 @@ def run(args):
                 # print(p)
         return answer
     logger.info(f'The model has {count_parameters(model)} trainable parameters')
+    import ipdb;ipdb.set_trace()
 
 #   from thop import profile
 #   input_tmp = torch.randn().to(device)
@@ -293,10 +294,10 @@ if __name__ == '__main__':
     # for data_name in ['sims', 'mosi', 'mosei']:
     for data_name in [ args.datasetName ]:
         args.datasetName = data_name
-        # args.seeds = [1111,1112, 1113, 1114, 1115]
+        args.seeds = [1111,1112, 1113, 1114, 1115]
         # notes next line or not to change run times
         # args.seeds = [1113,1114]
-        args.seeds = [1114]
+        # args.seeds = [1114]
         if args.is_tune:
             run_tune(args, tune_times=50)
         else:

@@ -146,7 +146,8 @@ class ConfigRegression():
             'use_bert': True,
             'use_finetune': True,
             'save_labels': False,
-            'early_stop': 8,
+            'early_stop': 20,
+            # 'early_stop': 8,
             'update_epochs': 1
             },
             'datasetParas':{

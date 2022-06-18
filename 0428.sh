@@ -1,8 +1,8 @@
 #!/bin/bash
 # 2022年 05月 15日 星期日 12:11:19 CST
 # python run.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mult
-#python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mult
-python 5.特征可视化tsne.py
+# python 6.生成tsne的输入文件npz.py --datasetName mustard --ablationType indep_resnet --key_eval Loss --modelName mult
+# python 5.特征可视化tsne.py
 
 
 # 2022年 05月 15日 星期日 11:48:37 CST 这三个是一组实验，需要按顺序运行完才可以生成可视化特征
